@@ -6,42 +6,48 @@
   <title>Onboarding Dashboard</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
-  <svg class="svg-sprite" aria-hidden="true" focusable="false">
-    <symbol id="icon-users" viewBox="0 0 24 24">
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-    </symbol>
-    <symbol id="icon-clock" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 7v5l3 2" />
-    </symbol>
-    <symbol id="icon-clipboard" viewBox="0 0 24 24">
-      <rect x="5" y="4" width="14" height="17" rx="2" />
-      <path d="M9 4V2h6v2M9 11l2 2 4-4" />
-    </symbol>
-    <symbol id="icon-check" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="9" />
-      <path d="m8 12 2.5 2.5L16 9" />
-    </symbol>
-    <symbol id="icon-calendar" viewBox="0 0 24 24">
-      <rect x="3" y="5" width="18" height="16" rx="2" />
-      <path d="M16 3v4M8 3v4M3 10h18" />
-    </symbol>
-    <symbol id="icon-chevron-right" viewBox="0 0 24 24">
-      <path d="m9 18 6-6-6-6" />
-    </symbol>
-    <symbol id="icon-chevron-left" viewBox="0 0 24 24">
-      <path d="m15 18-6-6 6-6" />
-    </symbol>
-    <symbol id="icon-map-pin" viewBox="0 0 24 24">
-      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
-      <circle cx="12" cy="10" r="2" />
-    </symbol>
-  </svg>
-
+<body class="dashboard-preview-page">
+  <!-- Integration component starts here. The SVG sprite lives inside the component
+       so copying .onboarding-dashboard into the main app keeps its icons working. -->
   <main class="onboarding-dashboard">
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="icon-clipboard" viewBox="0 0 24 24">
+        <rect x="5" y="4" width="14" height="17" rx="2" />
+        <path d="M9 4V2h6v2M9 11l2 2 4-4" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="m8 12 2.5 2.5L16 9" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path d="M16 3v4M8 3v4M3 10h18" />
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+        <path d="m9 18 6-6-6-6" />
+      </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+        <path d="m15 18-6-6 6-6" />
+      </symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2" />
+      </symbol>
+      <symbol id="icon-sort" viewBox="0 0 24 24">
+        <path d="m8 9 4-4 4 4" />
+        <path d="m16 15-4 4-4-4" />
+      </symbol>
+    </svg>
+
     <header class="dashboard-heading">
       <h1>Onboarding Dashboard</h1>
       <p>Beheer en volg pre-accounts en het onboarding proces van zorgprofessionals.</p>
@@ -50,7 +56,7 @@
     <section class="metric-grid" aria-label="Onboarding samenvatting">
       <article class="metric-card">
         <div class="metric-icon metric-icon--green">
-          <svg><use href="#icon-users" /></svg>
+          <svg aria-hidden="true"><use href="#icon-users" /></svg>
         </div>
         <div>
           <p class="metric-label">Pre-accounts</p>
@@ -61,7 +67,7 @@
 
       <article class="metric-card">
         <div class="metric-icon metric-icon--orange">
-          <svg><use href="#icon-clock" /></svg>
+          <svg aria-hidden="true"><use href="#icon-clock" /></svg>
         </div>
         <div>
           <p class="metric-label">In behandeling</p>
@@ -72,7 +78,7 @@
 
       <article class="metric-card">
         <div class="metric-icon metric-icon--blue">
-          <svg><use href="#icon-clipboard" /></svg>
+          <svg aria-hidden="true"><use href="#icon-clipboard" /></svg>
         </div>
         <div>
           <p class="metric-label">Klaar voor vervolg</p>
@@ -83,7 +89,7 @@
 
       <article class="metric-card">
         <div class="metric-icon metric-icon--green">
-          <svg><use href="#icon-check" /></svg>
+          <svg aria-hidden="true"><use href="#icon-check" /></svg>
         </div>
         <div>
           <p class="metric-label">Geactiveerd</p>
@@ -99,7 +105,7 @@
           <h2>Recente pre-accounts</h2>
           <button class="outline-button" type="button">
             Bekijk alle pre-accounts
-            <svg><use href="#icon-chevron-right" /></svg>
+            <svg aria-hidden="true"><use href="#icon-chevron-right" /></svg>
           </button>
         </div>
 
@@ -109,7 +115,12 @@
               <tr>
                 <th>Naam</th>
                 <th>E-mail</th>
-                <th>Aangemeld op <span class="sort-mark">↕</span></th>
+                <th>
+                  <button class="table-sort-button" type="button" aria-label="Sorteer op aanmelddatum">
+                    Aangemeld op
+                    <svg class="sort-mark" aria-hidden="true"><use href="#icon-sort" /></svg>
+                  </button>
+                </th>
                 <th>Status</th>
                 <th>Beschikbaarheid</th>
                 <th aria-label="Actie"></th>
@@ -117,68 +128,68 @@
             </thead>
             <tbody>
               <tr>
-                <td><div class="person-cell"><span class="initial-avatar">FE</span><strong>Fatima El Amrani</strong></div></td>
+                <td><div class="person-cell"><span class="initial-avatar" aria-hidden="true">FE</span><strong>Fatima El Amrani</strong></div></td>
                 <td>fatima.elamrani@gmail.com</td>
                 <td>22 mei 2025</td>
                 <td><span class="status status--new">Nieuw</span></td>
-                <td><span class="availability"><svg><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
-                <td><button class="row-action" type="button" aria-label="Bekijk Fatima El Amrani"><svg><use href="#icon-chevron-right" /></svg></button></td>
+                <td><span class="availability"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
+                <td><button class="row-action" type="button" aria-label="Bekijk Fatima El Amrani"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button></td>
               </tr>
               <tr>
-                <td><div class="person-cell"><span class="initial-avatar">DV</span><strong>Daan de Vries</strong></div></td>
+                <td><div class="person-cell"><span class="initial-avatar" aria-hidden="true">DV</span><strong>Daan de Vries</strong></div></td>
                 <td>daan.devries@hotmail.com</td>
                 <td>21 mei 2025</td>
                 <td><span class="status status--new">Nieuw</span></td>
-                <td><span class="availability"><svg><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
-                <td><button class="row-action" type="button" aria-label="Bekijk Daan de Vries"><svg><use href="#icon-chevron-right" /></svg></button></td>
+                <td><span class="availability"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
+                <td><button class="row-action" type="button" aria-label="Bekijk Daan de Vries"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button></td>
               </tr>
               <tr>
-                <td><div class="person-cell"><span class="initial-avatar">SJ</span><strong>Sophie Jansen</strong></div></td>
+                <td><div class="person-cell"><span class="initial-avatar" aria-hidden="true">SJ</span><strong>Sophie Jansen</strong></div></td>
                 <td>sophie.jansen@outlook.com</td>
                 <td>21 mei 2025</td>
                 <td><span class="status status--new">Nieuw</span></td>
-                <td><span class="availability"><svg><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
-                <td><button class="row-action" type="button" aria-label="Bekijk Sophie Jansen"><svg><use href="#icon-chevron-right" /></svg></button></td>
+                <td><span class="availability"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
+                <td><button class="row-action" type="button" aria-label="Bekijk Sophie Jansen"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button></td>
               </tr>
               <tr>
-                <td><div class="person-cell"><span class="initial-avatar">YB</span><strong>Youssef Benali</strong></div></td>
+                <td><div class="person-cell"><span class="initial-avatar" aria-hidden="true">YB</span><strong>Youssef Benali</strong></div></td>
                 <td>y.benali@gmail.com</td>
                 <td>20 mei 2025</td>
                 <td><span class="status status--new">Nieuw</span></td>
-                <td><span class="availability"><svg><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
-                <td><button class="row-action" type="button" aria-label="Bekijk Youssef Benali"><svg><use href="#icon-chevron-right" /></svg></button></td>
+                <td><span class="availability"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
+                <td><button class="row-action" type="button" aria-label="Bekijk Youssef Benali"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button></td>
               </tr>
               <tr>
-                <td><div class="person-cell"><span class="initial-avatar initial-avatar--warm">LV</span><strong>Linda van Dijk</strong></div></td>
+                <td><div class="person-cell"><span class="initial-avatar" aria-hidden="true">LV</span><strong>Linda van Dijk</strong></div></td>
                 <td>linda.vandijk@gmail.com</td>
                 <td>19 mei 2025</td>
                 <td><span class="status status--review">In beoordeling</span></td>
-                <td><span class="availability"><svg><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
-                <td><button class="row-action" type="button" aria-label="Bekijk Linda van Dijk"><svg><use href="#icon-chevron-right" /></svg></button></td>
+                <td><span class="availability"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
+                <td><button class="row-action" type="button" aria-label="Bekijk Linda van Dijk"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button></td>
               </tr>
               <tr>
-                <td><div class="person-cell"><span class="initial-avatar initial-avatar--warm">MB</span><strong>Mark Bakker</strong></div></td>
+                <td><div class="person-cell"><span class="initial-avatar" aria-hidden="true">MB</span><strong>Mark Bakker</strong></div></td>
                 <td>mark.bakker@live.nl</td>
                 <td>19 mei 2025</td>
                 <td><span class="status status--review">In beoordeling</span></td>
-                <td><span class="availability"><svg><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
-                <td><button class="row-action" type="button" aria-label="Bekijk Mark Bakker"><svg><use href="#icon-chevron-right" /></svg></button></td>
+                <td><span class="availability"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
+                <td><button class="row-action" type="button" aria-label="Bekijk Mark Bakker"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button></td>
               </tr>
               <tr>
-                <td><div class="person-cell"><span class="initial-avatar">AY</span><strong>Aylin Yilmaz</strong></div></td>
+                <td><div class="person-cell"><span class="initial-avatar" aria-hidden="true">AY</span><strong>Aylin Yilmaz</strong></div></td>
                 <td>aylin.yilmaz@hotmail.com</td>
                 <td>18 mei 2025</td>
                 <td><span class="status status--new">Nieuw</span></td>
-                <td><span class="availability"><svg><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
-                <td><button class="row-action" type="button" aria-label="Bekijk Aylin Yilmaz"><svg><use href="#icon-chevron-right" /></svg></button></td>
+                <td><span class="availability"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
+                <td><button class="row-action" type="button" aria-label="Bekijk Aylin Yilmaz"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button></td>
               </tr>
               <tr>
-                <td><div class="person-cell"><span class="initial-avatar">PW</span><strong>Peter Willemse</strong></div></td>
+                <td><div class="person-cell"><span class="initial-avatar" aria-hidden="true">PW</span><strong>Peter Willemse</strong></div></td>
                 <td>p.willemse@gmail.com</td>
                 <td>18 mei 2025</td>
                 <td><span class="status status--invited">Uitgenodigd</span></td>
-                <td><span class="availability"><svg><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
-                <td><button class="row-action" type="button" aria-label="Bekijk Peter Willemse"><svg><use href="#icon-chevron-right" /></svg></button></td>
+                <td><span class="availability"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Bekijk beschikbaarheid</span></td>
+                <td><button class="row-action" type="button" aria-label="Bekijk Peter Willemse"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button></td>
               </tr>
             </tbody>
           </table>
@@ -187,14 +198,14 @@
         <div class="table-footer">
           <span>1–8 van 48</span>
           <nav class="pagination" aria-label="Paginering">
-            <button type="button" aria-label="Vorige pagina"><svg><use href="#icon-chevron-left" /></svg></button>
-            <button type="button" class="is-active">1</button>
+            <button type="button" aria-label="Vorige pagina"><svg aria-hidden="true"><use href="#icon-chevron-left" /></svg></button>
+            <button type="button" class="is-active" aria-current="page">1</button>
             <button type="button">2</button>
             <button type="button">3</button>
             <button type="button">4</button>
             <button type="button">5</button>
-            <span>…</span>
-            <button type="button" aria-label="Volgende pagina"><svg><use href="#icon-chevron-right" /></svg></button>
+            <span aria-hidden="true">…</span>
+            <button type="button" aria-label="Volgende pagina"><svg aria-hidden="true"><use href="#icon-chevron-right" /></svg></button>
           </nav>
         </div>
       </article>
@@ -204,94 +215,94 @@
           <div class="panel-header">
             <h2>Geplande kennismakingen</h2>
             <button class="outline-button outline-button--compact" type="button">
-              <svg><use href="#icon-calendar" /></svg>
+              <svg aria-hidden="true"><use href="#icon-calendar" /></svg>
               Bekijk kalender
             </button>
           </div>
 
           <div class="appointment-list">
-            <div class="appointment-card">
+            <article class="appointment-card">
               <div class="appointment-date"><strong>22</strong><span>MEI</span></div>
               <div class="appointment-main">
                 <strong>Fatima El Amrani</strong>
-                <span><svg><use href="#icon-clock" /></svg>10:00 - 10:30</span>
-                <span><svg><use href="#icon-map-pin" /></svg>Op kantoor</span>
+                <span><svg aria-hidden="true"><use href="#icon-clock" /></svg>10:00 - 10:30</span>
+                <span><svg aria-hidden="true"><use href="#icon-map-pin" /></svg>Op kantoor</span>
               </div>
               <div class="interviewer">
                 <span class="muted-label">Interviewer</span>
-                <span class="interviewer-line"><span class="photo-avatar photo-avatar--one">AM</span>Armin Mehdizadeh</span>
+                <span class="interviewer-line"><span class="initial-avatar" aria-hidden="true">AM</span>Armin Mehdizadeh</span>
               </div>
               <span class="status status--confirmed">Bevestigd</span>
-            </div>
+            </article>
 
-            <div class="appointment-card">
+            <article class="appointment-card">
               <div class="appointment-date"><strong>22</strong><span>MEI</span></div>
               <div class="appointment-main">
                 <strong>Daan de Vries</strong>
-                <span><svg><use href="#icon-clock" /></svg>14:00 - 14:30</span>
-                <span><svg><use href="#icon-map-pin" /></svg>Op kantoor</span>
+                <span><svg aria-hidden="true"><use href="#icon-clock" /></svg>14:00 - 14:30</span>
+                <span><svg aria-hidden="true"><use href="#icon-map-pin" /></svg>Op kantoor</span>
               </div>
               <div class="interviewer">
                 <span class="muted-label">Interviewer</span>
-                <span class="interviewer-line"><span class="photo-avatar photo-avatar--two">SJ</span>Sophie Jansen</span>
+                <span class="interviewer-line"><span class="initial-avatar" aria-hidden="true">SJ</span>Sophie Jansen</span>
               </div>
               <span class="status status--confirmed">Bevestigd</span>
-            </div>
+            </article>
 
-            <div class="appointment-card">
+            <article class="appointment-card">
               <div class="appointment-date"><strong>23</strong><span>MEI</span></div>
               <div class="appointment-main">
                 <strong>Sophie Jansen</strong>
-                <span><svg><use href="#icon-clock" /></svg>09:30 - 10:00</span>
-                <span><svg><use href="#icon-map-pin" /></svg>Op kantoor</span>
+                <span><svg aria-hidden="true"><use href="#icon-clock" /></svg>09:30 - 10:00</span>
+                <span><svg aria-hidden="true"><use href="#icon-map-pin" /></svg>Op kantoor</span>
               </div>
               <div class="interviewer">
                 <span class="muted-label">Interviewer</span>
-                <span class="interviewer-line"><span class="photo-avatar photo-avatar--three">KJ</span>Kevin de Jong</span>
+                <span class="interviewer-line"><span class="initial-avatar" aria-hidden="true">KJ</span>Kevin de Jong</span>
               </div>
               <span class="status status--pending">In afwachting</span>
-            </div>
+            </article>
 
-            <div class="appointment-card">
+            <article class="appointment-card">
               <div class="appointment-date"><strong>23</strong><span>MEI</span></div>
               <div class="appointment-main">
                 <strong>Youssef Benali</strong>
-                <span><svg><use href="#icon-clock" /></svg>11:00 - 11:30</span>
-                <span><svg><use href="#icon-map-pin" /></svg>Op kantoor</span>
+                <span><svg aria-hidden="true"><use href="#icon-clock" /></svg>11:00 - 11:30</span>
+                <span><svg aria-hidden="true"><use href="#icon-map-pin" /></svg>Op kantoor</span>
               </div>
               <div class="interviewer">
                 <span class="muted-label">Interviewer</span>
-                <span class="interviewer-line"><span class="photo-avatar photo-avatar--four">LD</span>Linda van Dijk</span>
+                <span class="interviewer-line"><span class="initial-avatar" aria-hidden="true">LD</span>Linda van Dijk</span>
               </div>
               <span class="status status--pending">In afwachting</span>
-            </div>
+            </article>
 
-            <div class="appointment-card">
+            <article class="appointment-card">
               <div class="appointment-date"><strong>26</strong><span>MEI</span></div>
               <div class="appointment-main">
                 <strong>Mark Bakker</strong>
-                <span><svg><use href="#icon-clock" /></svg>15:00 - 15:30</span>
-                <span><svg><use href="#icon-map-pin" /></svg>Op kantoor</span>
+                <span><svg aria-hidden="true"><use href="#icon-clock" /></svg>15:00 - 15:30</span>
+                <span><svg aria-hidden="true"><use href="#icon-map-pin" /></svg>Op kantoor</span>
               </div>
               <div class="interviewer">
                 <span class="muted-label">Interviewer</span>
-                <span class="interviewer-line"><span class="photo-avatar photo-avatar--one">AM</span>Armin Mehdizadeh</span>
+                <span class="interviewer-line"><span class="initial-avatar" aria-hidden="true">AM</span>Armin Mehdizadeh</span>
               </div>
               <span class="status status--pending">In afwachting</span>
-            </div>
+            </article>
           </div>
 
           <button class="text-link" type="button">
             Bekijk alle geplande kennismakingen
-            <svg><use href="#icon-chevron-right" /></svg>
+            <svg aria-hidden="true"><use href="#icon-chevron-right" /></svg>
           </button>
         </article>
 
         <section class="availability-section">
           <h2>Beschikbaarheid</h2>
           <button class="availability-button" type="button">
-            <span><svg><use href="#icon-calendar" /></svg>Beschikbaarheid beheren</span>
-            <svg><use href="#icon-chevron-right" /></svg>
+            <span><svg aria-hidden="true"><use href="#icon-calendar" /></svg>Beschikbaarheid beheren</span>
+            <svg aria-hidden="true"><use href="#icon-chevron-right" /></svg>
           </button>
         </section>
       </aside>
