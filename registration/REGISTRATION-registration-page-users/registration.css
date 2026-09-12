@@ -1,4 +1,19 @@
-:root {
+/* =========================================================
+   Shared registration styles
+   Portable root: .registration-flow
+   ========================================================= */
+body.registration-page {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #fbfcfa;
+}
+
+body.registration-step-page {
+  background: #f8faf7;
+}
+
+.registration-flow {
   --reg-navy: #11172a;
   --reg-text: #4f586a;
   --reg-green: #4d8e2f;
@@ -8,45 +23,46 @@
   --reg-surface: #ffffff;
   --reg-bg: #fbfcfa;
   --reg-shadow: 0 14px 42px rgba(30, 48, 24, 0.06);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  min-width: 320px;
-  background: var(--reg-bg);
-}
-
-body.registration-page {
-  margin: 0;
-  min-height: 100vh;
+  width: 100%;
   color: var(--reg-navy);
-  background: var(--reg-bg);
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-img,
-svg {
+body.registration-page .registration-flow {
+  min-height: 100vh;
+}
+
+.registration-flow,
+.registration-flow * {
+  box-sizing: border-box;
+}
+
+.registration-flow button,
+.registration-flow input,
+.registration-flow textarea {
+  font: inherit;
+}
+
+.registration-flow img,
+.registration-flow svg {
   display: block;
 }
 
-.site-header,
-.registration-shell {
+.registration-flow .site-header,
+.registration-flow .registration-shell {
   width: min(100% - 48px, 1040px);
   margin-inline: auto;
 }
 
-.site-header {
+.registration-flow .site-header {
   min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.brand {
+.registration-flow .brand {
   display: inline-flex;
   align-items: center;
   width: 146px;
@@ -54,15 +70,14 @@ svg {
   text-decoration: none;
 }
 
-.zorgpunt-logo {
-  display: block;
+.registration-flow .zorgpunt-logo {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: left center;
 }
 
-.help-link {
+.registration-flow .help-link {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -72,7 +87,7 @@ svg {
   font-weight: 700;
 }
 
-.help-link > svg:not(.help-chevron) {
+.registration-flow .help-link > svg:not(.help-chevron) {
   width: 15px;
   height: 15px;
   fill: none;
@@ -82,13 +97,13 @@ svg {
   stroke-linejoin: round;
 }
 
-.help-link strong {
+.registration-flow .help-link strong {
   color: var(--reg-green);
   font-size: 12px;
   font-weight: 800;
 }
 
-.help-chevron {
+.registration-flow .help-chevron {
   width: 13px;
   height: 13px;
   fill: none;
@@ -98,44 +113,47 @@ svg {
   stroke-linejoin: round;
 }
 
-.registration-shell {
+/* =========================================================
+   Registration landing page - index.html
+   ========================================================= */
+.registration-flow .registration-shell {
   margin-bottom: 42px;
 }
 
-.registration-hero {
+.registration-flow .registration-hero {
   min-height: 510px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1.03fr) minmax(355px, .97fr);
+  grid-template-columns: minmax(0, 1.03fr) minmax(355px, 0.97fr);
   background: var(--reg-surface);
   border: 1px solid var(--reg-border);
   border-radius: 12px;
   box-shadow: var(--reg-shadow);
 }
 
-.registration-hero__content {
+.registration-flow .registration-hero__content {
   padding: 48px 34px 36px 42px;
 }
 
-.eyebrow {
+.registration-flow .eyebrow {
   margin: 0 0 16px;
   color: var(--reg-green);
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 
-.registration-hero h1 {
+.registration-flow .registration-hero h1 {
   max-width: 440px;
   margin: 0;
   font-size: clamp(35px, 4.2vw, 51px);
   line-height: 1.05;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   font-weight: 820;
 }
 
-.hero-copy {
+.registration-flow .hero-copy {
   max-width: 445px;
   margin: 20px 0 28px;
   color: var(--reg-text);
@@ -143,7 +161,7 @@ svg {
   line-height: 1.7;
 }
 
-.benefit-list {
+.registration-flow .benefit-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -151,24 +169,24 @@ svg {
   gap: 17px;
 }
 
-.benefit-item {
+.registration-flow .benefit-item {
   display: grid;
   grid-template-columns: 42px minmax(0, 1fr);
   gap: 14px;
   align-items: center;
 }
 
-.benefit-icon {
+.registration-flow .benefit-icon {
   width: 42px;
   height: 42px;
-  border-radius: 50%;
   display: grid;
   place-items: center;
   color: var(--reg-green);
   background: var(--reg-green-soft);
+  border-radius: 50%;
 }
 
-.benefit-icon svg {
+.registration-flow .benefit-icon svg {
   width: 22px;
   height: 22px;
   fill: none;
@@ -178,39 +196,39 @@ svg {
   stroke-linejoin: round;
 }
 
-.benefit-item > span:last-child {
+.registration-flow .benefit-item > span:last-child {
   display: grid;
   gap: 2px;
 }
 
-.benefit-item strong {
+.registration-flow .benefit-item strong {
   font-size: 14px;
   line-height: 1.35;
   font-weight: 760;
 }
 
-.benefit-item small {
+.registration-flow .benefit-item small {
   color: var(--reg-text);
   font-size: 12.5px;
   line-height: 1.45;
 }
 
-.registration-hero__media {
+.registration-flow .registration-hero__media {
   position: relative;
   min-height: 510px;
   overflow: hidden;
   background: linear-gradient(135deg, #f4f7f3 0%, #fff 64%, #edf2ed 100%);
 }
 
-.registration-hero__media::after {
+.registration-flow .registration-hero__media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, .92) 0%, rgba(255, 255, 255, .22) 13%, rgba(255, 255, 255, 0) 34%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.22) 13%, rgba(255, 255, 255, 0) 34%);
   pointer-events: none;
 }
 
-.registration-hero__media img {
+.registration-flow .registration-hero__media img {
   width: 100%;
   height: 100%;
   min-height: 510px;
@@ -218,7 +236,7 @@ svg {
   object-position: center top;
 }
 
-.registration-cta {
+.registration-flow .registration-cta {
   min-height: 182px;
   margin-top: 16px;
   padding: 28px 38px;
@@ -232,7 +250,7 @@ svg {
   box-shadow: 0 8px 28px rgba(30, 48, 24, 0.03);
 }
 
-.registration-cta__icon {
+.registration-flow .registration-cta__icon {
   width: 48px;
   height: 48px;
   display: grid;
@@ -240,7 +258,7 @@ svg {
   color: var(--reg-green);
 }
 
-.registration-cta__icon svg {
+.registration-flow .registration-cta__icon svg {
   width: 38px;
   height: 38px;
   fill: none;
@@ -250,7 +268,7 @@ svg {
   stroke-linejoin: round;
 }
 
-.registration-cta__body {
+.registration-flow .registration-cta__body {
   min-width: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
@@ -259,12 +277,12 @@ svg {
   align-items: center;
 }
 
-.registration-cta__copy {
+.registration-flow .registration-cta__copy {
   grid-area: copy;
   align-self: start;
 }
 
-.registration-cta h2 {
+.registration-flow .registration-cta h2 {
   margin: 2px 0 8px;
   color: var(--reg-green);
   font-size: 21px;
@@ -272,7 +290,7 @@ svg {
   font-weight: 800;
 }
 
-.registration-cta__copy p {
+.registration-flow .registration-cta__copy p {
   max-width: 560px;
   margin: 0;
   color: var(--reg-text);
@@ -280,30 +298,30 @@ svg {
   line-height: 1.65;
 }
 
-.primary-button {
+.registration-flow .primary-button {
   grid-area: button;
   min-height: 48px;
   padding: 0 20px;
-  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   color: #fff;
   background: linear-gradient(100deg, var(--reg-green), #5ca139);
+  border-radius: 6px;
   text-decoration: none;
   font-size: 14px;
   font-weight: 760;
-  box-shadow: 0 6px 15px rgba(79, 143, 47, .16);
-  transition: transform .16s ease, background .16s ease;
+  box-shadow: 0 6px 15px rgba(79, 143, 47, 0.16);
+  transition: transform 0.16s ease, background 0.16s ease;
 }
 
-.primary-button:hover {
+.registration-flow .primary-button:hover {
   transform: translateY(-1px);
   background: linear-gradient(100deg, var(--reg-green-dark), var(--reg-green));
 }
 
-.primary-button svg {
+.registration-flow .primary-button svg {
   width: 17px;
   height: 17px;
   fill: none;
@@ -313,7 +331,7 @@ svg {
   stroke-linejoin: round;
 }
 
-.privacy-note {
+.registration-flow .privacy-note {
   grid-area: privacy;
   margin: 0;
   display: flex;
@@ -326,7 +344,7 @@ svg {
   text-align: center;
 }
 
-.privacy-note svg {
+.registration-flow .privacy-note svg {
   width: 13px;
   height: 13px;
   flex: 0 0 auto;
@@ -337,12 +355,10 @@ svg {
   stroke-linejoin: round;
 }
 
-/* Registration steps */
-.registration-step-page {
-  background: #f8faf7;
-}
-
-.step-layout {
+/* =========================================================
+   Shared registration steps - step-1.html to step-4.html
+   ========================================================= */
+.registration-flow .step-layout {
   width: min(100% - 48px, 760px);
   min-height: calc(100vh - 78px);
   margin: 0 auto;
@@ -350,7 +366,7 @@ svg {
   display: flex;
 }
 
-.step-card {
+.registration-flow .step-card {
   width: 100%;
   min-height: 720px;
   padding: 28px 34px 26px;
@@ -362,14 +378,14 @@ svg {
   box-shadow: var(--reg-shadow);
 }
 
-.step-progress {
+.registration-flow .step-progress {
   width: min(100%, 590px);
   margin: 0 auto 26px;
   display: flex;
   align-items: center;
 }
 
-.step-progress__item {
+.registration-flow .step-progress__item {
   width: 30px;
   height: 30px;
   flex: 0 0 30px;
@@ -383,31 +399,31 @@ svg {
   font-weight: 700;
 }
 
-.step-progress__item.is-active {
+.registration-flow .step-progress__item.is-active {
   color: #fff;
   background: var(--reg-green);
   border-color: var(--reg-green);
-  box-shadow: 0 4px 10px rgba(77, 142, 47, .2);
+  box-shadow: 0 4px 10px rgba(77, 142, 47, 0.2);
 }
 
-.step-progress__line {
+.registration-flow .step-progress__line {
   height: 1px;
   flex: 1 1 auto;
   margin: 0 9px;
   background: #dce1e7;
 }
 
-.step-progress__line.is-complete {
+.registration-flow .step-progress__line.is-complete {
   background: #b9d3ad;
 }
 
-.step-content {
+.registration-flow .step-content {
   width: min(100%, 560px);
   margin: 0 auto;
   text-align: center;
 }
 
-.step-counter {
+.registration-flow .step-counter {
   margin: 0 0 12px;
   color: #5f6877;
   font-size: 12px;
@@ -415,7 +431,7 @@ svg {
   font-weight: 600;
 }
 
-.step-icon {
+.registration-flow .step-icon {
   width: 68px;
   height: 68px;
   margin: 0 auto 18px;
@@ -426,7 +442,7 @@ svg {
   border-radius: 50%;
 }
 
-.step-icon svg {
+.registration-flow .step-icon svg {
   width: 34px;
   height: 34px;
   fill: none;
@@ -436,55 +452,59 @@ svg {
   stroke-linejoin: round;
 }
 
-.step-content h1 {
+.registration-flow .step-content h1 {
   margin: 0;
   color: var(--reg-navy);
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: -.025em;
+  letter-spacing: -0.025em;
   font-weight: 800;
 }
 
-.step-subtitle {
+.registration-flow .step-subtitle {
   margin: 9px 0 24px;
   color: #6b7280;
   font-size: 13px;
   line-height: 1.5;
 }
 
-.choice-list,
-.choice-grid,
-.check-list {
+.registration-flow .choice-list,
+.registration-flow .choice-grid,
+.registration-flow .check-list {
   width: 100%;
   margin: 0;
 }
 
-.choice-list {
+.registration-flow .choice-list {
   display: grid;
   gap: 10px;
 }
 
-.choice-grid {
+.registration-flow .choice-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
-.choice-row {
+.registration-flow .choice-row {
   position: relative;
 }
 
-.choice-row input {
+.registration-flow .choice-row input,
+.registration-flow .check-row input {
   position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.choice-row label {
+.registration-flow .choice-row label {
   min-height: 50px;
   padding: 0 14px;
   display: grid;
-  grid-template-columns: 24px minmax(0, 1fr) 20px;
+  grid-template-columns: 24px minmax(0, 1fr) 22px;
   gap: 10px;
   align-items: center;
   color: #253049;
@@ -495,14 +515,14 @@ svg {
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: border-color .15s ease, background .15s ease, box-shadow .15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
 }
 
-.choice-row label:hover {
+.registration-flow .choice-row label:hover {
   border-color: #b9d3ad;
 }
 
-.choice-check {
+.registration-flow .choice-check {
   width: 18px;
   height: 18px;
   display: grid;
@@ -513,53 +533,131 @@ svg {
   font-size: 10px;
 }
 
-.choice-selected {
+.registration-flow .choice-selected {
+  width: 22px;
+  height: 22px;
   justify-self: end;
+  display: grid;
+  place-items: center;
   color: transparent;
-  font-size: 15px;
+  background: currentColor;
+  border-radius: 50%;
 }
 
-.choice-row input:checked + label {
+.registration-flow .choice-selected svg {
+  width: 12px;
+  height: 12px;
+  color: #fff;
+}
+
+.registration-flow .choice-row input:checked + label {
   border-color: #8fbd78;
   background: #fbfef9;
-  box-shadow: inset 0 0 0 1px rgba(77, 142, 47, .08);
+  box-shadow: inset 0 0 0 1px rgba(77, 142, 47, 0.08);
 }
 
-.choice-row input:checked + label .choice-check {
+.registration-flow .choice-row input:checked + label .choice-check {
   color: var(--reg-green);
   background: var(--reg-green-soft);
 }
 
-.choice-row input:checked + label .choice-selected {
+.registration-flow .choice-row input:checked + label .choice-selected {
   color: var(--reg-green);
 }
 
-.choice-row--compact label {
+.registration-flow .choice-row input:focus-visible + label {
+  outline: 3px solid rgba(77, 142, 47, 0.18);
+  outline-offset: 2px;
+}
+
+.registration-flow .choice-row--compact label {
   min-height: 46px;
-  grid-template-columns: minmax(0, 1fr) 18px;
+  grid-template-columns: minmax(0, 1fr) 22px;
   text-align: center;
 }
 
-.choice-row--compact .choice-selected {
-  justify-self: end;
-}
-
-.choice-row--wide {
+.registration-flow .choice-row--wide {
   grid-column: 1 / 2;
 }
 
-.choice-list--travel .choice-row label {
-  grid-template-columns: minmax(0, 1fr) 18px;
+.registration-flow .step-actions {
+  width: min(100%, 560px);
+  margin: auto auto 0;
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 14px;
+}
+
+.registration-flow .step-actions--single {
+  grid-template-columns: 1fr;
+}
+
+.registration-flow .step-button {
+  min-height: 50px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.registration-flow .step-button:hover {
+  transform: translateY(-1px);
+}
+
+.registration-flow .step-button--primary {
+  color: #fff;
+  background: linear-gradient(100deg, var(--reg-green), #5ca139);
+  border: 1px solid var(--reg-green);
+  box-shadow: 0 6px 15px rgba(79, 143, 47, 0.14);
+}
+
+.registration-flow .step-button--secondary {
+  color: #253049;
+  background: #fff;
+  border: 1px solid #d9dfe5;
+}
+
+.registration-flow .step-button--secondary:hover {
+  border-color: #b9c3cc;
+}
+
+/* =========================================================
+   Step 1 - step-1.html
+   Uses the shared single-choice styles above.
+   ========================================================= */
+
+/* =========================================================
+   Step 2 - step-2.html
+   Uses the shared .choice-grid layout.
+   ========================================================= */
+
+/* =========================================================
+   Step 3 - step-3.html
+   ========================================================= */
+.registration-flow .choice-list--travel .choice-row label {
+  grid-template-columns: minmax(0, 1fr) 22px;
   text-align: center;
 }
 
-.check-list {
+/* =========================================================
+   Step 4 - step-4.html
+   ========================================================= */
+.registration-flow .check-list {
   display: grid;
   gap: 8px;
 }
 
-.check-row {
+.registration-flow .check-row {
   min-height: 44px;
+  position: relative;
   padding: 0 13px;
   display: grid;
   grid-template-columns: 20px minmax(0, 1fr);
@@ -575,13 +673,7 @@ svg {
   cursor: pointer;
 }
 
-.check-row input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.check-box {
+.registration-flow .check-box {
   width: 16px;
   height: 16px;
   display: grid;
@@ -590,17 +682,20 @@ svg {
   background: #fff;
   border: 1px solid #cbd2d9;
   border-radius: 3px;
-  font-size: 10px;
-  font-weight: 800;
 }
 
-.check-row:has(input:checked) .check-box {
+.registration-flow .check-row input:checked + .check-box {
   color: #fff;
   background: var(--reg-green);
   border-color: var(--reg-green);
 }
 
-.step-textarea {
+.registration-flow .check-row input:focus-visible + .check-box {
+  outline: 3px solid rgba(77, 142, 47, 0.18);
+  outline-offset: 2px;
+}
+
+.registration-flow .step-textarea {
   width: 100%;
   min-height: 52px;
   margin-top: 2px;
@@ -611,105 +706,64 @@ svg {
   border: 1px solid #dde3e7;
   border-radius: 6px;
   outline: none;
-  font: inherit;
   font-size: 12px;
 }
 
-.step-textarea:focus {
+.registration-flow .step-textarea:focus {
   border-color: #8fbd78;
-  box-shadow: 0 0 0 3px rgba(77, 142, 47, .08);
+  box-shadow: 0 0 0 3px rgba(77, 142, 47, 0.08);
 }
 
-.step-actions {
-  width: min(100%, 560px);
-  margin: auto auto 0;
-  padding-top: 30px;
-  display: grid;
-  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-  gap: 14px;
-}
-
-.step-actions--single {
-  grid-template-columns: 1fr;
-}
-
-.step-button {
-  min-height: 50px;
-  padding: 0 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 750;
-  transition: transform .15s ease, border-color .15s ease, background .15s ease;
-}
-
-.step-button:hover {
-  transform: translateY(-1px);
-}
-
-.step-button--primary {
-  color: #fff;
-  background: linear-gradient(100deg, var(--reg-green), #5ca139);
-  border: 1px solid var(--reg-green);
-  box-shadow: 0 6px 15px rgba(79, 143, 47, .14);
-}
-
-.step-button--secondary {
-  color: #253049;
-  background: #fff;
-  border: 1px solid #d9dfe5;
-}
-
-.step-button--secondary:hover {
-  border-color: #b9c3cc;
-}
-
+/* =========================================================
+   Responsive registration styles
+   ========================================================= */
 @media (max-width: 760px) {
-  body.registration-page {
+  body.registration-page,
+  body.registration-step-page {
     background: #fff;
   }
 
-  .site-header {
+  .registration-flow .site-header {
     width: 100%;
     min-height: 57px;
     padding: 0 18px;
     border-bottom: 1px solid #edf0eb;
   }
 
-  .brand {
+  .registration-step-page .registration-flow .site-header {
+    border-bottom: 0;
+  }
+
+  .registration-flow .brand {
     width: 100px;
     height: 30px;
     min-width: 0;
     min-height: 0;
   }
 
-  .help-link {
+  .registration-flow .help-link {
     gap: 4px;
     font-size: 9px;
   }
 
-  .help-link > svg:not(.help-chevron),
-  .help-link strong {
+  .registration-flow .help-link > svg:not(.help-chevron),
+  .registration-flow .help-link strong {
     display: none;
   }
 
-  .help-chevron {
+  .registration-flow .help-chevron {
     width: 11px;
     height: 11px;
   }
 
-  .registration-container {
+  .registration-flow .registration-container {
     min-height: calc(100dvh - 57px);
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .registration-shell {
+  .registration-flow .registration-shell {
     width: calc(100% - 24px);
     max-width: 480px;
     min-height: auto;
@@ -721,7 +775,7 @@ svg {
     box-shadow: 0 8px 24px rgba(17, 23, 42, 0.06);
   }
 
-  .registration-hero {
+  .registration-flow .registration-hero {
     min-height: 0;
     display: block;
     border: 0;
@@ -729,61 +783,61 @@ svg {
     box-shadow: none;
   }
 
-  .registration-hero__content {
+  .registration-flow .registration-hero__content {
     padding: 22px 2px 5px;
   }
 
-  .eyebrow {
+  .registration-flow .eyebrow {
     margin-bottom: 9px;
     font-size: 9px;
   }
 
-  .registration-hero h1 {
+  .registration-flow .registration-hero h1 {
     max-width: 290px;
     font-size: 27px;
     line-height: 1.06;
-    letter-spacing: -.035em;
+    letter-spacing: -0.035em;
   }
 
-  .hero-copy {
+  .registration-flow .hero-copy {
     max-width: 335px;
     margin: 12px 0 20px;
     font-size: 11.5px;
     line-height: 1.65;
   }
 
-  .benefit-list {
+  .registration-flow .benefit-list {
     gap: 13px;
   }
 
-  .benefit-item {
+  .registration-flow .benefit-item {
     grid-template-columns: 33px minmax(0, 1fr);
     gap: 10px;
   }
 
-  .benefit-icon {
+  .registration-flow .benefit-icon {
     width: 33px;
     height: 33px;
   }
 
-  .benefit-icon svg {
+  .registration-flow .benefit-icon svg {
     width: 18px;
     height: 18px;
   }
 
-  .benefit-item strong {
+  .registration-flow .benefit-item strong {
     font-size: 11px;
   }
 
-  .benefit-item small {
+  .registration-flow .benefit-item small {
     font-size: 9.5px;
   }
 
-  .registration-hero__media {
+  .registration-flow .registration-hero__media {
     display: none;
   }
 
-  .registration-cta {
+  .registration-flow .registration-cta {
     min-height: 0;
     margin: 17px 0 0;
     padding: 0 2px;
@@ -794,133 +848,131 @@ svg {
     box-shadow: none;
   }
 
-  .registration-cta__icon,
-  .registration-cta__copy {
+  .registration-flow .registration-cta__icon,
+  .registration-flow .registration-cta__copy {
     display: none;
   }
 
-  .registration-cta__body {
+  .registration-flow .registration-cta__body {
     display: block;
   }
 
-  .primary-button {
+  .registration-flow .primary-button {
     width: 100%;
     min-height: 42px;
     border-radius: 5px;
     font-size: 12px;
   }
 
-  .privacy-note {
+  .registration-flow .privacy-note {
     margin-top: 10px;
     font-size: 8.5px;
   }
 
-  .privacy-note svg {
+  .registration-flow .privacy-note svg {
     width: 11px;
     height: 11px;
   }
 
-  .registration-step-page {
-    background: #fff;
-  }
-
-  .registration-step-page .site-header {
-    border-bottom: 0;
-  }
-
-  .step-layout {
+  .registration-flow .step-layout {
     width: 100%;
     min-height: calc(100dvh - 57px);
     margin: 0;
     padding: 8px;
   }
 
-  .step-card {
+  .registration-flow .step-card {
     min-height: calc(100dvh - 73px);
     padding: 18px 16px 14px;
     border-radius: 13px;
-    box-shadow: 0 6px 22px rgba(17, 23, 42, .04);
+    box-shadow: 0 6px 22px rgba(17, 23, 42, 0.04);
   }
 
-  .step-progress {
+  .registration-flow .step-progress {
     width: 100%;
     margin-bottom: 24px;
   }
 
-  .step-progress__item {
+  .registration-flow .step-progress__item {
     width: 25px;
     height: 25px;
     flex-basis: 25px;
     font-size: 10px;
   }
 
-  .step-progress__line {
+  .registration-flow .step-progress__line {
     margin-inline: 5px;
   }
 
-  .step-content {
+  .registration-flow .step-content {
     width: 100%;
   }
 
-  .step-counter {
+  .registration-flow .step-counter {
     margin-bottom: 10px;
     font-size: 10px;
   }
 
-  .step-icon {
+  .registration-flow .step-icon {
     width: 58px;
     height: 58px;
     margin-bottom: 15px;
   }
 
-  .step-icon svg {
+  .registration-flow .step-icon svg {
     width: 29px;
     height: 29px;
   }
 
-  .step-content h1 {
+  .registration-flow .step-content h1 {
     font-size: 19px;
     line-height: 1.25;
   }
 
-  .step-subtitle {
+  .registration-flow .step-subtitle {
     margin: 8px 0 18px;
     font-size: 10px;
   }
 
-  .choice-list,
-  .choice-grid,
-  .check-list {
+  .registration-flow .choice-list,
+  .registration-flow .choice-grid,
+  .registration-flow .check-list {
     gap: 7px;
   }
 
-  .choice-row label {
+  .registration-flow .choice-row label {
     min-height: 42px;
     padding-inline: 10px;
-    grid-template-columns: 20px minmax(0, 1fr) 16px;
+    grid-template-columns: 20px minmax(0, 1fr) 18px;
     gap: 8px;
     font-size: 10px;
     border-radius: 5px;
   }
 
-  .choice-row--compact label,
-  .choice-list--travel .choice-row label {
+  .registration-flow .choice-row--compact label,
+  .registration-flow .choice-list--travel .choice-row label {
     min-height: 40px;
-    grid-template-columns: minmax(0, 1fr) 16px;
+    grid-template-columns: minmax(0, 1fr) 18px;
     font-size: 10px;
   }
 
-  .choice-check {
+  .registration-flow .choice-check {
     width: 15px;
     height: 15px;
     font-size: 8px;
   }
 
-  .choice-selected {
-    font-size: 11px;
+  .registration-flow .choice-selected {
+    width: 18px;
+    height: 18px;
   }
 
-  .check-row {
+  .registration-flow .choice-selected svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .registration-flow .check-row {
     min-height: 37px;
     padding-inline: 9px;
     grid-template-columns: 16px minmax(0, 1fr);
@@ -929,25 +981,24 @@ svg {
     border-radius: 5px;
   }
 
-  .check-box {
+  .registration-flow .check-box {
     width: 14px;
     height: 14px;
-    font-size: 8px;
   }
 
-  .step-textarea {
+  .registration-flow .step-textarea {
     min-height: 42px;
     padding: 10px;
     font-size: 10px;
   }
 
-  .step-actions {
+  .registration-flow .step-actions {
     width: 100%;
     padding-top: 20px;
     gap: 10px;
   }
 
-  .step-button {
+  .registration-flow .step-button {
     min-height: 42px;
     padding-inline: 12px;
     font-size: 10px;
@@ -956,41 +1007,41 @@ svg {
 }
 
 @media (max-width: 380px) {
-  .site-header {
+  .registration-flow .site-header {
     padding-inline: 13px;
   }
 
-  .registration-shell {
+  .registration-flow .registration-shell {
     width: calc(100% - 16px);
     padding: 12px;
   }
 
-  .registration-hero__content {
+  .registration-flow .registration-hero__content {
     padding-top: 19px;
   }
 
-  .registration-hero h1 {
+  .registration-flow .registration-hero h1 {
     font-size: 25px;
   }
 
-  .step-layout {
+  .registration-flow .step-layout {
     padding: 6px;
   }
 
-  .step-card {
+  .registration-flow .step-card {
     min-height: calc(100dvh - 69px);
     padding: 15px 12px 12px;
   }
 
-  .step-progress__line {
+  .registration-flow .step-progress__line {
     margin-inline: 3px;
   }
 
-  .step-content h1 {
+  .registration-flow .step-content h1 {
     font-size: 18px;
   }
 
-  .step-actions {
+  .registration-flow .step-actions {
     gap: 8px;
   }
 }
