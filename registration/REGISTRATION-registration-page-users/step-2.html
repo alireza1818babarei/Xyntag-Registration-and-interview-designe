@@ -7,42 +7,40 @@
   <link rel="stylesheet" href="./registration.css">
 </head>
 <body class="registration-page registration-step-page">
-  <header class="site-header">
-    <a class="brand" href="./index.html" aria-label="Zorgpunt Connect home"><img class="zorgpunt-logo" src="./assets/zorgpunt-logo.png" alt="Zorgpunt Connect"></a>
-    <a class="help-link" href="tel:+31850300827"><span>Hulp nodig?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.4 10.9a15.7 15.7 0 0 0 4.7 4.7l1.6-1.6a1.2 1.2 0 0 1 1.2-.3c1.3.4 2.7.7 4.1.7.7 0 1.2.5 1.2 1.2V20c0 .7-.5 1.2-1.2 1.2C10.5 21.2 2.8 13.5 2.8 4c0-.7.5-1.2 1.2-1.2h4.4c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.7 4.1.1.4 0 .9-.3 1.2l-1.6 1.6Z"/></svg><strong>+31 85 0300827</strong><svg class="help-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></svg></a>
-  </header>
-
-  <main class="step-layout">
-    <section class="step-card" aria-labelledby="step-title">
-      <nav class="step-progress" aria-label="Registratie voortgang">
-        <span class="step-progress__item">1</span><span class="step-progress__line is-complete"></span>
-        <span class="step-progress__item is-active" aria-current="step">2</span><span class="step-progress__line"></span>
-        <span class="step-progress__item">3</span><span class="step-progress__line"></span>
-        <span class="step-progress__item">4</span><span class="step-progress__line"></span>
-        <span class="step-progress__item">5</span><span class="step-progress__line"></span>
-        <span class="step-progress__item">6</span>
-      </nav>
-
-      <div class="step-content">
-        <p class="step-counter">2 van 6</p>
-        <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="2"/><path d="M9 7V5h6v2M4 12h16M10 12v2h4v-2"/></svg></div>
-        <h1 id="step-title">Hoeveel cliënten bedien je<br>gemiddeld per week?</h1>
-        <p class="step-subtitle">Kies het aantal dat het meest van toepassing is.</p>
-
-        <form class="choice-grid">
-          <div class="choice-row choice-row--compact"><input type="radio" name="clients" id="clients-0"><label for="clients-0"><span>0</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-          <div class="choice-row choice-row--compact"><input type="radio" name="clients" id="clients-1-2"><label for="clients-1-2"><span>1 - 2</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-          <div class="choice-row choice-row--compact"><input type="radio" name="clients" id="clients-3-5" checked><label for="clients-3-5"><span>3 - 5</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-          <div class="choice-row choice-row--compact"><input type="radio" name="clients" id="clients-6-10"><label for="clients-6-10"><span>6 - 10</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-          <div class="choice-row choice-row--compact choice-row--wide"><input type="radio" name="clients" id="clients-10-plus"><label for="clients-10-plus"><span>Meer dan 10</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-        </form>
-      </div>
-
-      <div class="step-actions">
-        <a class="step-button step-button--secondary" href="./step-1.html"><span aria-hidden="true">←</span> Vorige</a>
-        <a class="step-button step-button--primary" href="./step-3.html">Volgende <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
-  </main>
+  <div class="registration-flow registration-flow--steps">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Zorgpunt Connect home"><img class="zorgpunt-logo" src="./assets/zorgpunt-logo.png" alt="Zorgpunt Connect"></a>
+      <a class="help-link" href="tel:+31850300827"><span>Hulp nodig?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.4 10.9a15.7 15.7 0 0 0 4.7 4.7l1.6-1.6a1.2 1.2 0 0 1 1.2-.3c1.3.4 2.7.7 4.1.7.7 0 1.2.5 1.2 1.2V20c0 .7-.5 1.2-1.2 1.2C10.5 21.2 2.8 13.5 2.8 4c0-.7.5-1.2 1.2-1.2h4.4c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.7 4.1.1.4 0 .9-.3 1.2l-1.6 1.6Z"/></svg><strong>+31 85 0300827</strong><svg class="help-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></svg></a>
+    </header>
+    <main class="step-layout">
+      <section class="step-card" aria-labelledby="step-title">
+        <nav class="step-progress" aria-label="Registratie voortgang">
+          <span class="step-progress__item">1</span><span class="step-progress__line is-complete"></span>
+          <span class="step-progress__item is-active" aria-current="step">2</span><span class="step-progress__line"></span>
+          <span class="step-progress__item">3</span><span class="step-progress__line"></span>
+          <span class="step-progress__item">4</span><span class="step-progress__line"></span>
+          <span class="step-progress__item">5</span><span class="step-progress__line"></span>
+          <span class="step-progress__item">6</span>
+        </nav>
+        <div class="step-content">
+          <p class="step-counter">2 van 6</p>
+          <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="2"/><path d="M9 7V5h6v2M4 12h16M10 12v2h4v-2"/></svg></div>
+          <h1 id="step-title">Hoeveel cliënten bedien je<br>gemiddeld per week?</h1>
+          <p class="step-subtitle">Kies het aantal dat het meest van toepassing is.</p>
+          <form class="choice-grid" aria-labelledby="step-title">
+            <div class="choice-row choice-row--compact"><input type="radio" name="clients" value="0" id="clients-0"><label for="clients-0"><span>0</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+            <div class="choice-row choice-row--compact"><input type="radio" name="clients" value="1-2" id="clients-1-2"><label for="clients-1-2"><span>1 - 2</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+            <div class="choice-row choice-row--compact"><input type="radio" name="clients" value="3-5" id="clients-3-5" checked><label for="clients-3-5"><span>3 - 5</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+            <div class="choice-row choice-row--compact"><input type="radio" name="clients" value="6-10" id="clients-6-10"><label for="clients-6-10"><span>6 - 10</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+            <div class="choice-row choice-row--compact choice-row--wide"><input type="radio" name="clients" value="more-than-10" id="clients-10-plus"><label for="clients-10-plus"><span>Meer dan 10</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+          </form>
+        </div>
+        <div class="step-actions">
+          <a class="step-button step-button--secondary" href="./step-1.html"><span aria-hidden="true">←</span> Vorige</a>
+          <a class="step-button step-button--primary" href="./step-3.html">Volgende <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
