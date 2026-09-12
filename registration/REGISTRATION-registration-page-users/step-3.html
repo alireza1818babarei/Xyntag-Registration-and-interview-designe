@@ -7,41 +7,39 @@
   <link rel="stylesheet" href="./registration.css">
 </head>
 <body class="registration-page registration-step-page">
-  <header class="site-header">
-    <a class="brand" href="./index.html" aria-label="Zorgpunt Connect home"><img class="zorgpunt-logo" src="./assets/zorgpunt-logo.png" alt="Zorgpunt Connect"></a>
-    <a class="help-link" href="tel:+31850300827"><span>Hulp nodig?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.4 10.9a15.7 15.7 0 0 0 4.7 4.7l1.6-1.6a1.2 1.2 0 0 1 1.2-.3c1.3.4 2.7.7 4.1.7.7 0 1.2.5 1.2 1.2V20c0 .7-.5 1.2-1.2 1.2C10.5 21.2 2.8 13.5 2.8 4c0-.7.5-1.2 1.2-1.2h4.4c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.7 4.1.1.4 0 .9-.3 1.2l-1.6 1.6Z"/></svg><strong>+31 85 0300827</strong><svg class="help-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></svg></a>
-  </header>
-
-  <main class="step-layout">
-    <section class="step-card" aria-labelledby="step-title">
-      <nav class="step-progress" aria-label="Registratie voortgang">
-        <span class="step-progress__item">1</span><span class="step-progress__line is-complete"></span>
-        <span class="step-progress__item">2</span><span class="step-progress__line is-complete"></span>
-        <span class="step-progress__item is-active" aria-current="step">3</span><span class="step-progress__line"></span>
-        <span class="step-progress__item">4</span><span class="step-progress__line"></span>
-        <span class="step-progress__item">5</span><span class="step-progress__line"></span>
-        <span class="step-progress__item">6</span>
-      </nav>
-
-      <div class="step-content">
-        <p class="step-counter">3 van 6</p>
-        <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 15h2l2-5h8l2 5h2v4H4z"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/><path d="M9 10 10.5 7h3L15 10"/></svg></div>
-        <h1 id="step-title">Hoe ver ben je bereid te<br>reizen voor werk?</h1>
-        <p class="step-subtitle">Kies de maximale reistijd die voor jou acceptabel is.</p>
-
-        <form class="choice-list choice-list--travel">
-          <div class="choice-row choice-row--compact"><input type="radio" name="travel" id="travel-15"><label for="travel-15"><span>Tot 15 km / 15 min</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-          <div class="choice-row choice-row--compact"><input type="radio" name="travel" id="travel-30" checked><label for="travel-30"><span>15 - 30 km / 30 min</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-          <div class="choice-row choice-row--compact"><input type="radio" name="travel" id="travel-45"><label for="travel-45"><span>30 - 50 km / 45 min</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-          <div class="choice-row choice-row--compact"><input type="radio" name="travel" id="travel-60"><label for="travel-60"><span>50+ km / meer dan 60 min</span><span class="choice-selected" aria-hidden="true" style="width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:currentColor"><svg viewBox="0 0 20 20" width="12" height="12" style="color:#fff"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
-        </form>
-      </div>
-
-      <div class="step-actions">
-        <a class="step-button step-button--secondary" href="./step-2.html"><span aria-hidden="true">←</span> Vorige</a>
-        <a class="step-button step-button--primary" href="./step-4.html">Volgende <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
-  </main>
+  <div class="registration-flow registration-flow--steps">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Zorgpunt Connect home"><img class="zorgpunt-logo" src="./assets/zorgpunt-logo.png" alt="Zorgpunt Connect"></a>
+      <a class="help-link" href="tel:+31850300827"><span>Hulp nodig?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.4 10.9a15.7 15.7 0 0 0 4.7 4.7l1.6-1.6a1.2 1.2 0 0 1 1.2-.3c1.3.4 2.7.7 4.1.7.7 0 1.2.5 1.2 1.2V20c0 .7-.5 1.2-1.2 1.2C10.5 21.2 2.8 13.5 2.8 4c0-.7.5-1.2 1.2-1.2h4.4c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.8.7 4.1.1.4 0 .9-.3 1.2l-1.6 1.6Z"/></svg><strong>+31 85 0300827</strong><svg class="help-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></svg></a>
+    </header>
+    <main class="step-layout">
+      <section class="step-card" aria-labelledby="step-title">
+        <nav class="step-progress" aria-label="Registratie voortgang">
+          <span class="step-progress__item">1</span><span class="step-progress__line is-complete"></span>
+          <span class="step-progress__item">2</span><span class="step-progress__line is-complete"></span>
+          <span class="step-progress__item is-active" aria-current="step">3</span><span class="step-progress__line"></span>
+          <span class="step-progress__item">4</span><span class="step-progress__line"></span>
+          <span class="step-progress__item">5</span><span class="step-progress__line"></span>
+          <span class="step-progress__item">6</span>
+        </nav>
+        <div class="step-content">
+          <p class="step-counter">3 van 6</p>
+          <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 15h2l2-5h8l2 5h2v4H4z"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/><path d="M9 10 10.5 7h3L15 10"/></svg></div>
+          <h1 id="step-title">Hoe ver ben je bereid te<br>reizen voor werk?</h1>
+          <p class="step-subtitle">Kies de maximale reistijd die voor jou acceptabel is.</p>
+          <form class="choice-list choice-list--travel" aria-labelledby="step-title">
+            <div class="choice-row choice-row--compact"><input type="radio" name="travel" value="15" id="travel-15"><label for="travel-15"><span>Tot 15 km / 15 min</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+            <div class="choice-row choice-row--compact"><input type="radio" name="travel" value="30" id="travel-30" checked><label for="travel-30"><span>15 - 30 km / 30 min</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+            <div class="choice-row choice-row--compact"><input type="radio" name="travel" value="45" id="travel-45"><label for="travel-45"><span>30 - 50 km / 45 min</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+            <div class="choice-row choice-row--compact"><input type="radio" name="travel" value="60-plus" id="travel-60"><label for="travel-60"><span>50+ km / meer dan 60 min</span><span class="choice-selected" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5 10.5 8.2 13.5 15 7.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label></div>
+          </form>
+        </div>
+        <div class="step-actions">
+          <a class="step-button step-button--secondary" href="./step-2.html"><span aria-hidden="true">←</span> Vorige</a>
+          <a class="step-button step-button--primary" href="./step-4.html">Volgende <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
