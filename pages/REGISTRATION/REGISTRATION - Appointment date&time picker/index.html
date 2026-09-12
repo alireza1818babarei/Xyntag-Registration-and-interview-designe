@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan je kennismakingsgesprek | Zorgpunt Connect</title>
+  <link rel="stylesheet" href="../registration.css">
+</head>
+<body class="registration-page appointment-page">
+  <div class="registration-flow registration-flow--appointment">
+    <header class="appointment-header">
+      <a class="brand" href="../REGISTRATION - registration page users/index.html" aria-label="Zorgpunt Connect home">
+        <img class="zorgpunt-logo" src="../REGISTRATION - registration page users/assets/zorgpunt-logo.png" alt="Zorgpunt Connect">
+      </a>
+
+      <div class="appointment-header__actions">
+        <button class="appointment-language" type="button" aria-label="Taal wijzigen">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+          <span>Nederlands</span>
+          <svg class="appointment-language__chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></svg>
+        </button>
+        <button class="appointment-menu" type="button" aria-label="Menu openen">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="appointment-shell">
+      <nav class="appointment-progress" aria-label="Voortgang kennismakingsgesprek">
+        <div class="appointment-progress__step is-complete">
+          <span class="appointment-progress__marker" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m7 12 3 3 7-7"/></svg>
+          </span>
+          <span class="appointment-progress__label">Aanmelding</span>
+          <small>Ontvangen</small>
+        </div>
+        <span class="appointment-progress__line is-complete" aria-hidden="true"></span>
+        <div class="appointment-progress__step is-active" aria-current="step">
+          <span class="appointment-progress__marker">2</span>
+          <span class="appointment-progress__label">Plan een kennismaking</span>
+          <small>Kies datum en tijd</small>
+        </div>
+        <span class="appointment-progress__line" aria-hidden="true"></span>
+        <div class="appointment-progress__step">
+          <span class="appointment-progress__marker">3</span>
+          <span class="appointment-progress__label">Bevestiging</span>
+          <small>Controleer je afspraak</small>
+        </div>
+        <span class="appointment-progress__line" aria-hidden="true"></span>
+        <div class="appointment-progress__step">
+          <span class="appointment-progress__marker">4</span>
+          <span class="appointment-progress__label">Volgende stap</span>
+          <small>We nemen contact op</small>
+        </div>
+      </nav>
+
+      <section class="appointment-intro" aria-labelledby="appointment-title">
+        <h1 id="appointment-title">Plan je kennismakingsgesprek</h1>
+        <p>Kies hieronder een datum en tijd die jou het beste uitkomt. Het gesprek vindt plaats op ons kantoor.</p>
+      </section>
+
+      <form class="appointment-form" action="#" method="post">
+        <div class="appointment-picker-grid">
+          <section class="appointment-card appointment-calendar-card" aria-labelledby="appointment-date-title">
+            <h2 id="appointment-date-title">1. Kies een datum</h2>
+
+            <div class="appointment-calendar__toolbar">
+              <strong>Mei 2025</strong>
+              <div class="appointment-calendar__controls">
+                <button type="button" aria-label="Vorige maand" data-action="previous-month">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button type="button" aria-label="Volgende maand" data-action="next-month">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="appointment-calendar__weekdays" aria-hidden="true">
+              <span>Ma</span><span>Di</span><span>Wo</span><span>Do</span><span>Vr</span><span>Za</span><span>Zo</span>
+            </div>
+
+            <div class="appointment-calendar" role="group" aria-label="Beschikbare datums in mei 2025">
+              <span class="appointment-calendar__day is-outside">28</span>
+              <span class="appointment-calendar__day is-outside">29</span>
+              <span class="appointment-calendar__day is-outside">30</span>
+              <span class="appointment-calendar__day">1</span>
+              <span class="appointment-calendar__day">2</span>
+              <span class="appointment-calendar__day is-muted">3</span>
+              <span class="appointment-calendar__day is-muted">4</span>
+
+              <span class="appointment-calendar__day">5</span>
+              <span class="appointment-calendar__day">6</span>
+              <span class="appointment-calendar__day">7</span>
+              <span class="appointment-calendar__day">8</span>
+              <span class="appointment-calendar__day">9</span>
+              <span class="appointment-calendar__day is-muted">10</span>
+              <span class="appointment-calendar__day is-muted">11</span>
+
+              <span class="appointment-calendar__day">12</span>
+              <span class="appointment-calendar__day">13</span>
+              <span class="appointment-calendar__day">14</span>
+              <span class="appointment-calendar__day">15</span>
+              <span class="appointment-calendar__day">16</span>
+              <span class="appointment-calendar__day is-muted">17</span>
+              <span class="appointment-calendar__day is-muted">18</span>
+
+              <span class="appointment-calendar__day">19</span>
+              <span class="appointment-calendar__day">20</span>
+              <span class="appointment-calendar__day">21</span>
+
+              <label class="appointment-calendar__choice">
+                <input type="radio" name="appointment_date" value="2025-05-22" checked>
+                <span class="appointment-calendar__date">22</span>
+              </label>
+              <label class="appointment-calendar__choice has-availability-dot">
+                <input type="radio" name="appointment_date" value="2025-05-23">
+                <span class="appointment-calendar__date">23</span>
+              </label>
+              <span class="appointment-calendar__day is-muted">24</span>
+              <span class="appointment-calendar__day is-muted">25</span>
+
+              <label class="appointment-calendar__choice has-availability-dot">
+                <input type="radio" name="appointment_date" value="2025-05-26">
+                <span class="appointment-calendar__date">26</span>
+              </label>
+              <span class="appointment-calendar__day">27</span>
+              <label class="appointment-calendar__choice has-availability-dot">
+                <input type="radio" name="appointment_date" value="2025-05-28">
+                <span class="appointment-calendar__date">28</span>
+              </label>
+              <span class="appointment-calendar__day">29</span>
+              <span class="appointment-calendar__day">30</span>
+              <span class="appointment-calendar__day is-muted">31</span>
+              <span class="appointment-calendar__day is-outside">1</span>
+            </div>
+
+            <p class="appointment-timezone">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>
+              <span>Alle tijden zijn weergegeven in jouw lokale tijd (CEST)</span>
+            </p>
+          </section>
+
+          <section class="appointment-card appointment-time-card" aria-labelledby="appointment-time-title">
+            <h2 id="appointment-time-title">2. Kies een tijd</h2>
+            <p class="appointment-selected-date">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>
+              <span>Donderdag 22 mei 2025</span>
+            </p>
+
+            <fieldset class="appointment-time-grid">
+              <legend class="sr-only">Beschikbare tijden</legend>
+              <label><input type="radio" name="appointment_time" value="09:00-09:30"><span>09:00 - 09:30</span></label>
+              <label><input type="radio" name="appointment_time" value="09:30-10:00"><span>09:30 - 10:00</span></label>
+              <label><input type="radio" name="appointment_time" value="10:00-10:30" checked><span>10:00 - 10:30</span></label>
+              <label><input type="radio" name="appointment_time" value="10:30-11:00"><span>10:30 - 11:00</span></label>
+              <label><input type="radio" name="appointment_time" value="11:00-11:30"><span>11:00 - 11:30</span></label>
+              <label><input type="radio" name="appointment_time" value="13:00-13:30"><span>13:00 - 13:30</span></label>
+              <label><input type="radio" name="appointment_time" value="13:30-14:00"><span>13:30 - 14:00</span></label>
+              <label><input type="radio" name="appointment_time" value="14:00-14:30"><span>14:00 - 14:30</span></label>
+              <label><input type="radio" name="appointment_time" value="14:30-15:00"><span>14:30 - 15:00</span></label>
+              <label><input type="radio" name="appointment_time" value="15:00-15:30"><span>15:00 - 15:30</span></label>
+              <label><input type="radio" name="appointment_time" value="15:30-16:00"><span>15:30 - 16:00</span></label>
+              <label><input type="radio" name="appointment_time" value="16:00-16:30"><span>16:00 - 16:30</span></label>
+            </fieldset>
+          </section>
+        </div>
+
+        <section class="appointment-details" aria-label="Afspraakdetails">
+          <article class="appointment-detail">
+            <span class="appointment-detail__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <div>
+              <strong>Locatie</strong>
+              <span>Zorgpunt Connect</span>
+              <span>Kantooradres</span>
+              <span>Nederland</span>
+            </div>
+          </article>
+
+          <article class="appointment-detail">
+            <span class="appointment-detail__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 20c.5-4.3 3-6.5 7-6.5s6.5 2.2 7 6.5"/></svg>
+            </span>
+            <div>
+              <strong>Met wie?</strong>
+              <span>Armin Mehdizadeh</span>
+              <span>Operationeel Manager</span>
+            </div>
+          </article>
+
+          <article class="appointment-detail">
+            <span class="appointment-detail__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <div>
+              <strong>Duur gesprek</strong>
+              <span>30 minuten</span>
+            </div>
+          </article>
+        </section>
+
+        <div class="appointment-submit">
+          <button class="appointment-submit__button" type="submit">
+            <span>Bevestig afspraak</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13M14 8l4 4-4 4"/></svg>
+          </button>
+          <p class="appointment-privacy">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg>
+            <span>Je gegevens zijn veilig en worden vertrouwelijk behandeld.</span>
+          </p>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
