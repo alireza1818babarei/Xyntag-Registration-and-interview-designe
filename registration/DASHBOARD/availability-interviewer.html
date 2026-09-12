@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beschikbaarheid beheren</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="availability-preview-page">
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="availability-icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+    <symbol id="availability-icon-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4" /></symbol>
+    <symbol id="availability-icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+    <symbol id="availability-icon-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 10v6M14 10v6" /></symbol>
+  </svg>
+
+  <main class="availability-preview">
+    <section class="availability-modal" aria-labelledby="availability-title">
+      <header class="availability-modal__header">
+        <div>
+          <h1 id="availability-title">Beschikbaarheid beheren</h1>
+          <p>Stel jouw beschikbaarheid in voor kennismakingsgesprekken.</p>
+        </div>
+        <button class="availability-modal__close" type="button" aria-label="Sluiten">
+          <svg><use href="#availability-icon-close" /></svg>
+        </button>
+      </header>
+
+      <div class="availability-modal__body">
+        <div class="availability-interviewer">
+          <label for="interviewer">Interviewer</label>
+          <div class="availability-select availability-select--interviewer">
+            <select id="interviewer" aria-label="Interviewer">
+              <option>Armin Mehdizadeh</option>
+            </select>
+            <svg><use href="#availability-icon-chevron" /></svg>
+          </div>
+        </div>
+
+        <div class="availability-repeat-row">
+          <span>Herhaal wekelijks</span>
+          <label class="availability-toggle" aria-label="Herhaal wekelijks">
+            <input type="checkbox" checked />
+            <span></span>
+          </label>
+        </div>
+
+        <div class="availability-week">
+          <section class="availability-day availability-day--active">
+            <div class="availability-day__name">
+              <label class="availability-checkbox">
+                <input type="checkbox" checked />
+                <span></span>
+              </label>
+              <strong>Maandag</strong>
+            </div>
+            <div class="availability-day__ranges">
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Maandag starttijd 1"><option>09:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Maandag eindtijd 1"><option>12:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-add" type="button"><svg><use href="#availability-icon-plus" /></svg>Tijd toevoegen</button>
+              </div>
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Maandag starttijd 2"><option>13:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Maandag eindtijd 2"><option>17:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-delete" type="button" aria-label="Tijd verwijderen"><svg><use href="#availability-icon-trash" /></svg></button>
+              </div>
+            </div>
+          </section>
+
+          <section class="availability-day availability-day--active">
+            <div class="availability-day__name">
+              <label class="availability-checkbox"><input type="checkbox" checked /><span></span></label>
+              <strong>Dinsdag</strong>
+            </div>
+            <div class="availability-day__ranges">
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Dinsdag starttijd 1"><option>09:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Dinsdag eindtijd 1"><option>12:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-add" type="button"><svg><use href="#availability-icon-plus" /></svg>Tijd toevoegen</button>
+              </div>
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Dinsdag starttijd 2"><option>13:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Dinsdag eindtijd 2"><option>17:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-delete" type="button" aria-label="Tijd verwijderen"><svg><use href="#availability-icon-trash" /></svg></button>
+              </div>
+            </div>
+          </section>
+
+          <section class="availability-day availability-day--active">
+            <div class="availability-day__name">
+              <label class="availability-checkbox"><input type="checkbox" checked /><span></span></label>
+              <strong>Woensdag</strong>
+            </div>
+            <div class="availability-day__ranges">
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Woensdag starttijd 1"><option>09:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Woensdag eindtijd 1"><option>12:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-add" type="button"><svg><use href="#availability-icon-plus" /></svg>Tijd toevoegen</button>
+              </div>
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Woensdag starttijd 2"><option>13:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Woensdag eindtijd 2"><option>17:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-delete" type="button" aria-label="Tijd verwijderen"><svg><use href="#availability-icon-trash" /></svg></button>
+              </div>
+            </div>
+          </section>
+
+          <section class="availability-day availability-day--active">
+            <div class="availability-day__name">
+              <label class="availability-checkbox"><input type="checkbox" checked /><span></span></label>
+              <strong>Donderdag</strong>
+            </div>
+            <div class="availability-day__ranges">
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Donderdag starttijd 1"><option>09:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Donderdag eindtijd 1"><option>12:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-add" type="button"><svg><use href="#availability-icon-plus" /></svg>Tijd toevoegen</button>
+              </div>
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Donderdag starttijd 2"><option>13:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Donderdag eindtijd 2"><option>17:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-delete" type="button" aria-label="Tijd verwijderen"><svg><use href="#availability-icon-trash" /></svg></button>
+              </div>
+            </div>
+          </section>
+
+          <section class="availability-day availability-day--active">
+            <div class="availability-day__name">
+              <label class="availability-checkbox"><input type="checkbox" checked /><span></span></label>
+              <strong>Vrijdag</strong>
+            </div>
+            <div class="availability-day__ranges">
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Vrijdag starttijd 1"><option>09:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Vrijdag eindtijd 1"><option>12:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-add" type="button"><svg><use href="#availability-icon-plus" /></svg>Tijd toevoegen</button>
+              </div>
+              <div class="availability-range-row">
+                <div class="availability-select"><select aria-label="Vrijdag starttijd 2"><option>13:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <span class="availability-range-separator">-</span>
+                <div class="availability-select"><select aria-label="Vrijdag eindtijd 2"><option>17:00</option></select><svg><use href="#availability-icon-chevron" /></svg></div>
+                <button class="availability-delete" type="button" aria-label="Tijd verwijderen"><svg><use href="#availability-icon-trash" /></svg></button>
+              </div>
+            </div>
+          </section>
+
+          <section class="availability-day availability-day--inactive">
+            <div class="availability-day__name">
+              <label class="availability-checkbox"><input type="checkbox" /><span></span></label>
+              <strong>Zaterdag</strong>
+            </div>
+            <span class="availability-unavailable">Niet beschikbaar</span>
+          </section>
+
+          <section class="availability-day availability-day--inactive">
+            <div class="availability-day__name">
+              <label class="availability-checkbox"><input type="checkbox" /><span></span></label>
+              <strong>Zondag</strong>
+            </div>
+            <span class="availability-unavailable">Niet beschikbaar</span>
+          </section>
+        </div>
+      </div>
+
+      <footer class="availability-modal__footer">
+        <button class="availability-footer-btn availability-footer-btn--cancel" type="button">Annuleren</button>
+        <button class="availability-footer-btn availability-footer-btn--save" type="button">Opslaan</button>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
