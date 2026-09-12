@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-account profiel</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="profile-preview-page">
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="profile-icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+    <symbol id="profile-icon-download" viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3" /></symbol>
+    <symbol id="profile-icon-chevron-down" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4" /></symbol>
+    <symbol id="profile-icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="M12 8v4l3 2" /></symbol>
+    <symbol id="profile-icon-map" viewBox="0 0 24 24"><path d="M19 10c0 4.6-7 10-7 10S5 14.6 5 10a7 7 0 1 1 14 0Z" /><circle cx="12" cy="10" r="2" /></symbol>
+    <symbol id="profile-icon-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M8 3v4m8-4v4M4 10h16" /></symbol>
+    <symbol id="profile-icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></symbol>
+    <symbol id="profile-icon-phone" viewBox="0 0 24 24"><path d="M7 3 4.5 5.5c.8 6.4 7.6 13.2 14 14L21 17l-4-3-2 2c-2.9-1.4-5.6-4.1-7-7l2-2-3-4Z" /></symbol>
+    <symbol id="profile-icon-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" /><path d="M14 3v5h5" /></symbol>
+    <symbol id="profile-icon-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="m8.5 12 2.2 2.2 4.8-4.8" /></symbol>
+    <symbol id="profile-icon-minus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="M9 12h6" /></symbol>
+  </svg>
+
+  <main class="profile-preview">
+    <section class="preaccount-profile" aria-labelledby="profile-title">
+      <div class="profile-titlebar">
+        <h1 id="profile-title">Pre-account profiel</h1>
+        <button class="profile-close" type="button" aria-label="Sluiten"><svg><use href="#profile-icon-close" /></svg></button>
+      </div>
+
+      <div class="profile-summary">
+        <div class="profile-identity">
+          <div class="profile-avatar">FE</div>
+          <div class="profile-person">
+            <h2>Fatima El Amrani</h2>
+            <div class="profile-meta"><span class="profile-status">Nieuw</span><span>Aangemeld op 22 mei 2025 om 14:32</span></div>
+          </div>
+        </div>
+        <div class="profile-actions">
+          <button class="profile-btn profile-btn--secondary" type="button"><svg><use href="#profile-icon-download" /></svg>Download CV</button>
+          <button class="profile-btn profile-btn--primary" type="button">Acties<svg><use href="#profile-icon-chevron-down" /></svg></button>
+        </div>
+      </div>
+
+      <nav class="profile-tabs" aria-label="Profiel secties">
+        <button type="button" class="is-active">Overzicht</button>
+        <button type="button">Persoonlijke gegevens</button>
+        <button type="button">Ervaring &amp; Opleiding</button>
+        <button type="button">Beschikbaarheid</button>
+        <button type="button">Voorkeuren</button>
+        <button type="button">Documenten</button>
+      </nav>
+
+      <div class="profile-content-grid">
+        <div class="profile-column">
+          <section class="profile-card profile-card--personal">
+            <h3>Persoonlijke gegevens</h3>
+            <dl class="profile-details">
+              <div><dt>Naam</dt><dd>Fatima El Amrani</dd></div>
+              <div><dt>Geboortedatum</dt><dd>14-03-1990 (35 jaar)</dd></div>
+              <div><dt>Geslacht</dt><dd>Vrouw</dd></div>
+              <div><dt>Nationaliteit</dt><dd>Marokkaans</dd></div>
+              <div><dt>Rijbewijs</dt><dd>B (Auto)</dd></div>
+              <div><dt>Talen</dt><dd>Nederlands (goed), Engels (basis), Arabisch (moedertaal)</dd></div>
+            </dl>
+          </section>
+
+          <section class="profile-card profile-card--contact">
+            <h3>Contactgegevens</h3>
+            <ul class="profile-contact-list">
+              <li><svg><use href="#profile-icon-mail" /></svg><span>fatima.elamrani@gmail.com</span></li>
+              <li><svg><use href="#profile-icon-phone" /></svg><span>06 12345678</span></li>
+              <li><svg><use href="#profile-icon-map" /></svg><span>Rotterdam, Nederland</span></li>
+            </ul>
+          </section>
+
+          <section class="profile-card profile-card--cv">
+            <h3>CV</h3>
+            <div class="profile-file-row">
+              <svg class="profile-file-icon"><use href="#profile-icon-file" /></svg>
+              <div><strong>Fatima_El_Amrani_CV.pdf</strong><span>Geüpload op 22 mei 2025</span></div>
+              <button type="button" aria-label="Download CV"><svg><use href="#profile-icon-download" /></svg></button>
+            </div>
+          </section>
+        </div>
+
+        <div class="profile-column">
+          <section class="profile-card profile-card--work">
+            <h3>Werkvoorkeuren</h3>
+            <ul class="profile-work-list">
+              <li><svg><use href="#profile-icon-clock" /></svg><span>Uren per week</span><strong>25 - 32 uur</strong></li>
+              <li><svg><use href="#profile-icon-clock" /></svg><span>Diensten voorkeur</span><strong>Dag, Avond</strong></li>
+              <li><svg><use href="#profile-icon-map" /></svg><span>Maximale reisafstand</span><strong>30 km</strong></li>
+              <li><svg><use href="#profile-icon-calendar" /></svg><span>Start beschikbaar</span><strong>Binnen 2 weken</strong></li>
+            </ul>
+          </section>
+
+          <section class="profile-card profile-card--groups">
+            <h3>Doelgroepen ervaring</h3>
+            <ul class="profile-check-list">
+              <li><svg class="is-positive"><use href="#profile-icon-check" /></svg>Verstandelijke beperking</li>
+              <li><svg class="is-positive"><use href="#profile-icon-check" /></svg>Lichamelijke beperking</li>
+              <li><svg class="is-positive"><use href="#profile-icon-check" /></svg>GGZ</li>
+              <li><svg class="is-positive"><use href="#profile-icon-check" /></svg>Ouderenzorg</li>
+              <li><svg class="is-neutral"><use href="#profile-icon-minus" /></svg>Jeugdzorg</li>
+            </ul>
+            <div class="profile-more">+1 andere</div>
+          </section>
+
+          <section class="profile-card profile-card--groups profile-card--preference">
+            <h3>Doelgroepen voorkeur</h3>
+            <ul class="profile-check-list">
+              <li><svg class="is-positive"><use href="#profile-icon-check" /></svg>Ouderenzorg</li>
+              <li><svg class="is-positive"><use href="#profile-icon-check" /></svg>GGZ</li>
+              <li><svg class="is-positive"><use href="#profile-icon-check" /></svg>Verstandelijke beperking</li>
+            </ul>
+            <div class="profile-more">+2 andere</div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
