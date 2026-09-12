@@ -1,0 +1,42 @@
+/* =========================================================
+   Shared application design tokens
+   Used by Registration and Dashboard templates
+   ========================================================= */
+:root {
+  --app-font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --app-color-primary: #4f8f2f;
+  --app-color-primary-dark: #3f7426;
+  --app-color-primary-hover: #467f2a;
+  --app-color-primary-light: #5ca139;
+  --app-color-primary-soft: #eef5e9;
+  --app-color-primary-border: #8fbd78;
+  --app-color-primary-border-soft: #b9d3ad;
+
+  --app-color-text: #111827;
+  --app-color-text-secondary: #52606d;
+  --app-color-text-muted: #7a8793;
+  --app-color-surface: #ffffff;
+  --app-color-background: #f7fafc;
+  --app-color-background-soft: #f8faf7;
+  --app-color-border: #dfe6ea;
+  --app-color-border-soft: #e9eef1;
+
+  --app-color-success: #4a7d2f;
+  --app-color-success-soft: #edf4e7;
+  --app-color-success-border: #e2ecd9;
+  --app-color-warning: #d27900;
+  --app-color-warning-soft: #fff0dd;
+  --app-color-warning-border: #ffe5c2;
+  --app-color-info: #3173bf;
+  --app-color-info-soft: #eaf2fd;
+  --app-color-info-border: #e1ecfb;
+
+  --app-shadow-subtle: 0 2px 8px rgba(27, 44, 59, 0.035);
+  --app-shadow-card: 0 14px 42px rgba(30, 48, 24, 0.06);
+  --app-shadow-primary: 0 6px 15px rgba(79, 143, 47, 0.16);
+  --app-focus-ring: 0 0 0 3px rgba(79, 143, 47, 0.18);
+
+  --app-gradient-primary: linear-gradient(100deg, var(--app-color-primary), var(--app-color-primary-light));
+  --app-gradient-primary-hover: linear-gradient(100deg, var(--app-color-primary-dark), var(--app-color-primary));
+}
