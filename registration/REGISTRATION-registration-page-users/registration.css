@@ -1,3 +1,5 @@
+@import url("../shared.css");
+
 /* =========================================================
    Shared registration styles
    Portable root: .registration-flow
@@ -6,26 +8,26 @@ body.registration-page {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #fbfcfa;
+  background: var(--app-color-background);
 }
 
 body.registration-step-page {
-  background: #f8faf7;
+  background: var(--app-color-background-soft);
 }
 
 .registration-flow {
-  --reg-navy: #11172a;
-  --reg-text: #4f586a;
-  --reg-green: #4d8e2f;
-  --reg-green-dark: #39731f;
-  --reg-green-soft: #eff6ea;
-  --reg-border: #e5e9e1;
-  --reg-surface: #ffffff;
-  --reg-bg: #fbfcfa;
-  --reg-shadow: 0 14px 42px rgba(30, 48, 24, 0.06);
+  --reg-navy: var(--app-color-text);
+  --reg-text: var(--app-color-text-secondary);
+  --reg-green: var(--app-color-primary);
+  --reg-green-dark: var(--app-color-primary-dark);
+  --reg-green-soft: var(--app-color-primary-soft);
+  --reg-border: var(--app-color-border);
+  --reg-surface: var(--app-color-surface);
+  --reg-bg: var(--app-color-background);
+  --reg-shadow: var(--app-shadow-card);
   width: 100%;
   color: var(--reg-navy);
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--app-font-family);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -217,7 +219,7 @@ body.registration-page .registration-flow {
   position: relative;
   min-height: 510px;
   overflow: hidden;
-  background: linear-gradient(135deg, #f4f7f3 0%, #fff 64%, #edf2ed 100%);
+  background: linear-gradient(135deg, #f4f7f3 0%, var(--app-color-surface) 64%, #edf2ed 100%);
 }
 
 .registration-flow .registration-hero__media::after {
@@ -244,7 +246,7 @@ body.registration-page .registration-flow {
   grid-template-columns: 48px minmax(0, 1fr);
   gap: 18px;
   align-items: start;
-  background: linear-gradient(100deg, #f6faf3 0%, #fff 100%);
+  background: linear-gradient(100deg, #f6faf3 0%, var(--app-color-surface) 100%);
   border: 1px solid var(--reg-border);
   border-radius: 12px;
   box-shadow: 0 8px 28px rgba(30, 48, 24, 0.03);
@@ -307,18 +309,18 @@ body.registration-page .registration-flow {
   justify-content: center;
   gap: 12px;
   color: #fff;
-  background: linear-gradient(100deg, var(--reg-green), #5ca139);
+  background: var(--app-gradient-primary);
   border-radius: 6px;
   text-decoration: none;
   font-size: 14px;
   font-weight: 760;
-  box-shadow: 0 6px 15px rgba(79, 143, 47, 0.16);
+  box-shadow: var(--app-shadow-primary);
   transition: transform 0.16s ease, background 0.16s ease;
 }
 
 .registration-flow .primary-button:hover {
   transform: translateY(-1px);
-  background: linear-gradient(100deg, var(--reg-green-dark), var(--reg-green));
+  background: var(--app-gradient-primary-hover);
 }
 
 .registration-flow .primary-button svg {
@@ -338,7 +340,7 @@ body.registration-page .registration-flow {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  color: #737b89;
+  color: var(--app-color-text-muted);
   font-size: 10.5px;
   line-height: 1.45;
   text-align: center;
@@ -372,7 +374,7 @@ body.registration-page .registration-flow {
   padding: 28px 34px 26px;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: var(--reg-surface);
   border: 1px solid var(--reg-border);
   border-radius: 16px;
   box-shadow: var(--reg-shadow);
@@ -391,9 +393,9 @@ body.registration-page .registration-flow {
   flex: 0 0 30px;
   display: grid;
   place-items: center;
-  color: #536075;
-  background: #fff;
-  border: 1px solid #cfd6df;
+  color: var(--app-color-text-secondary);
+  background: var(--app-color-surface);
+  border: 1px solid var(--app-color-border);
   border-radius: 50%;
   font-size: 12px;
   font-weight: 700;
@@ -403,18 +405,18 @@ body.registration-page .registration-flow {
   color: #fff;
   background: var(--reg-green);
   border-color: var(--reg-green);
-  box-shadow: 0 4px 10px rgba(77, 142, 47, 0.2);
+  box-shadow: 0 4px 10px rgba(79, 143, 47, 0.2);
 }
 
 .registration-flow .step-progress__line {
   height: 1px;
   flex: 1 1 auto;
   margin: 0 9px;
-  background: #dce1e7;
+  background: var(--app-color-border);
 }
 
 .registration-flow .step-progress__line.is-complete {
-  background: #b9d3ad;
+  background: var(--app-color-primary-border-soft);
 }
 
 .registration-flow .step-content {
@@ -425,7 +427,7 @@ body.registration-page .registration-flow {
 
 .registration-flow .step-counter {
   margin: 0 0 12px;
-  color: #5f6877;
+  color: var(--app-color-text-secondary);
   font-size: 12px;
   line-height: 1.3;
   font-weight: 600;
@@ -463,7 +465,7 @@ body.registration-page .registration-flow {
 
 .registration-flow .step-subtitle {
   margin: 9px 0 24px;
-  color: #6b7280;
+  color: var(--app-color-text-muted);
   font-size: 13px;
   line-height: 1.5;
 }
@@ -508,8 +510,8 @@ body.registration-page .registration-flow {
   gap: 10px;
   align-items: center;
   color: #253049;
-  background: #fff;
-  border: 1px solid #dde3e7;
+  background: var(--app-color-surface);
+  border: 1px solid var(--app-color-border);
   border-radius: 6px;
   text-align: left;
   font-size: 13px;
@@ -519,7 +521,7 @@ body.registration-page .registration-flow {
 }
 
 .registration-flow .choice-row label:hover {
-  border-color: #b9d3ad;
+  border-color: var(--app-color-primary-border-soft);
 }
 
 .registration-flow .choice-check {
@@ -528,7 +530,7 @@ body.registration-page .registration-flow {
   display: grid;
   place-items: center;
   color: #a0a8b3;
-  background: #f8faf8;
+  background: var(--app-color-background-soft);
   border-radius: 50%;
   font-size: 10px;
 }
@@ -551,9 +553,9 @@ body.registration-page .registration-flow {
 }
 
 .registration-flow .choice-row input:checked + label {
-  border-color: #8fbd78;
+  border-color: var(--app-color-primary-border);
   background: #fbfef9;
-  box-shadow: inset 0 0 0 1px rgba(77, 142, 47, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(79, 143, 47, 0.08);
 }
 
 .registration-flow .choice-row input:checked + label .choice-check {
@@ -566,8 +568,8 @@ body.registration-page .registration-flow {
 }
 
 .registration-flow .choice-row input:focus-visible + label {
-  outline: 3px solid rgba(77, 142, 47, 0.18);
-  outline-offset: 2px;
+  box-shadow: var(--app-focus-ring);
+  outline: none;
 }
 
 .registration-flow .choice-row--compact label {
@@ -614,19 +616,29 @@ body.registration-page .registration-flow {
 
 .registration-flow .step-button--primary {
   color: #fff;
-  background: linear-gradient(100deg, var(--reg-green), #5ca139);
-  border: 1px solid var(--reg-green);
-  box-shadow: 0 6px 15px rgba(79, 143, 47, 0.14);
+  background: var(--app-gradient-primary);
+  border: 1px solid var(--app-color-primary);
+  box-shadow: var(--app-shadow-primary);
+}
+
+.registration-flow .step-button--primary:hover {
+  background: var(--app-gradient-primary-hover);
 }
 
 .registration-flow .step-button--secondary {
   color: #253049;
-  background: #fff;
-  border: 1px solid #d9dfe5;
+  background: var(--app-color-surface);
+  border: 1px solid var(--app-color-border);
 }
 
 .registration-flow .step-button--secondary:hover {
   border-color: #b9c3cc;
+}
+
+.registration-flow .step-button:focus-visible,
+.registration-flow .primary-button:focus-visible {
+  outline: none;
+  box-shadow: var(--app-focus-ring);
 }
 
 /* =========================================================
@@ -664,8 +676,8 @@ body.registration-page .registration-flow {
   gap: 10px;
   align-items: center;
   color: #253049;
-  background: #fff;
-  border: 1px solid #dde3e7;
+  background: var(--app-color-surface);
+  border: 1px solid var(--app-color-border);
   border-radius: 6px;
   text-align: left;
   font-size: 13px;
@@ -679,7 +691,7 @@ body.registration-page .registration-flow {
   display: grid;
   place-items: center;
   color: transparent;
-  background: #fff;
+  background: var(--app-color-surface);
   border: 1px solid #cbd2d9;
   border-radius: 3px;
 }
@@ -691,8 +703,8 @@ body.registration-page .registration-flow {
 }
 
 .registration-flow .check-row input:focus-visible + .check-box {
-  outline: 3px solid rgba(77, 142, 47, 0.18);
-  outline-offset: 2px;
+  box-shadow: var(--app-focus-ring);
+  outline: none;
 }
 
 .registration-flow .step-textarea {
@@ -702,16 +714,16 @@ body.registration-page .registration-flow {
   padding: 12px 13px;
   resize: vertical;
   color: var(--reg-navy);
-  background: #fff;
-  border: 1px solid #dde3e7;
+  background: var(--app-color-surface);
+  border: 1px solid var(--app-color-border);
   border-radius: 6px;
   outline: none;
   font-size: 12px;
 }
 
 .registration-flow .step-textarea:focus {
-  border-color: #8fbd78;
-  box-shadow: 0 0 0 3px rgba(77, 142, 47, 0.08);
+  border-color: var(--app-color-primary-border);
+  box-shadow: var(--app-focus-ring);
 }
 
 /* =========================================================
@@ -720,14 +732,14 @@ body.registration-page .registration-flow {
 @media (max-width: 760px) {
   body.registration-page,
   body.registration-step-page {
-    background: #fff;
+    background: var(--app-color-surface);
   }
 
   .registration-flow .site-header {
     width: 100%;
     min-height: 57px;
     padding: 0 18px;
-    border-bottom: 1px solid #edf0eb;
+    border-bottom: 1px solid var(--app-color-border-soft);
   }
 
   .registration-step-page .registration-flow .site-header {
@@ -769,8 +781,8 @@ body.registration-page .registration-flow {
     min-height: auto;
     margin: 18px auto 24px;
     padding: 16px;
-    background: #fff;
-    border: 1px solid #e5e9e1;
+    background: var(--app-color-surface);
+    border: 1px solid var(--app-color-border);
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(17, 23, 42, 0.06);
   }
