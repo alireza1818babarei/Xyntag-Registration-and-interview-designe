@@ -945,7 +945,7 @@ button:focus-visible {
   align-items: flex-end;
   gap: 0;
   border-bottom: 1px solid #e8ebe8;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .profile-tabs button {
