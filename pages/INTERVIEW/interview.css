@@ -2778,3 +2778,428 @@ Step 3 - Vragen (Candidate)
     margin-top: 18px;
   }
 }
+
+/* =========================================================
+Step 3 - Vragen (Interviewer)
+========================================================= */
+.interview-app .sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.interview-app--interviewer-flow .interviewer-question-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 278px;
+  gap: 14px;
+  align-items: start;
+}
+
+.interview-app--interviewer-flow .interviewer-question-column {
+  min-width: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.interview-app--interviewer-flow .interviewer-question-card,
+.interview-app--interviewer-flow .interviewer-notes-card,
+.interview-app--interviewer-flow .candidate-insight-card {
+  background: #fff;
+  border: 1px solid var(--interview-border-soft);
+  border-radius: 8px;
+  box-shadow: var(--app-shadow-subtle);
+}
+
+.interview-app--interviewer-flow .interviewer-question-card {
+  padding: 20px 18px 18px;
+}
+
+.interview-app--interviewer-flow .interviewer-question-card .question-step-copy h1 {
+  max-width: none;
+  font-size: 18px;
+  line-height: 1.42;
+}
+
+.interview-app--interviewer-flow .interviewer-guidance {
+  margin-top: 20px;
+  padding: 13px 14px;
+  display: grid;
+  grid-template-columns: 23px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  color: #0b55d6;
+  background: #f8fbff;
+  border: 1px solid #9dc2ff;
+  border-radius: 6px;
+}
+
+.interview-app--interviewer-flow .interviewer-guidance svg {
+  width: 23px;
+  height: 23px;
+  stroke-width: 1.8;
+}
+
+.interview-app--interviewer-flow .interviewer-guidance p {
+  margin: 0;
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+.interview-app--interviewer-flow .interviewer-notes-card {
+  padding: 14px 16px 16px;
+}
+
+.interview-app--interviewer-flow .interviewer-notes-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--interview-navy);
+}
+
+.interview-app--interviewer-flow .interviewer-notes-title svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.7;
+}
+
+.interview-app--interviewer-flow .interviewer-notes-title h2 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.interview-app--interviewer-flow .interviewer-notes-title h2 span {
+  color: #68758e;
+  font-weight: 500;
+}
+
+.interview-app--interviewer-flow .interviewer-notes-card textarea {
+  width: 100%;
+  min-height: 132px;
+  margin-top: 11px;
+  padding: 12px;
+  resize: vertical;
+  color: var(--interview-navy);
+  background: #fff;
+  border: 1px solid #b9c8df;
+  border-radius: 5px;
+  outline: none;
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+.interview-app--interviewer-flow .interviewer-notes-card textarea::placeholder {
+  color: #8491a6;
+}
+
+.interview-app--interviewer-flow .interviewer-notes-card textarea:focus {
+  border-color: var(--interview-blue);
+  box-shadow: var(--app-focus-ring);
+}
+
+.interview-app--interviewer-flow .candidate-insight-card {
+  padding: 14px 13px 13px;
+}
+
+.interview-app--interviewer-flow .candidate-insight-header {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.interview-app--interviewer-flow .candidate-insight-avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: #164fac;
+  background: #edf4ff;
+  border-radius: 50%;
+}
+
+.interview-app--interviewer-flow .candidate-insight-avatar svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 1.8;
+}
+
+.interview-app--interviewer-flow .candidate-insight-header h2 {
+  margin: 0;
+  color: var(--interview-navy);
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.interview-app--interviewer-flow .candidate-cv-button {
+  min-height: 30px;
+  padding: 0 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #1455b7;
+  background: #fff;
+  border: 1px solid #a9c7f5;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.interview-app--interviewer-flow .candidate-cv-button svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 1.8;
+}
+
+.interview-app--interviewer-flow .candidate-cv-button:focus-visible {
+  outline: none;
+  box-shadow: var(--app-focus-ring);
+}
+
+.interview-app--interviewer-flow .candidate-insight-meta {
+  margin: 14px 0 0;
+  padding: 0 0 13px;
+  display: grid;
+  gap: 8px;
+  border-bottom: 1px solid var(--interview-border-soft);
+  list-style: none;
+}
+
+.interview-app--interviewer-flow .candidate-insight-meta li {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  gap: 7px;
+  align-items: center;
+  color: #4b5b78;
+  font-size: 9.5px;
+  line-height: 1.35;
+}
+
+.interview-app--interviewer-flow .candidate-insight-meta svg {
+  width: 15px;
+  height: 15px;
+  color: #354f86;
+  stroke-width: 1.7;
+}
+
+.interview-app--interviewer-flow .competency-heading {
+  margin-top: 13px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.interview-app--interviewer-flow .competency-heading h3 {
+  margin: 0;
+  color: var(--interview-navy);
+  font-size: 9px;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.interview-app--interviewer-flow .competency-heading h3 span {
+  font-weight: 500;
+}
+
+.interview-app--interviewer-flow .competency-heading > svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  color: #506187;
+  stroke-width: 1.7;
+}
+
+.interview-app--interviewer-flow .competency-list {
+  margin-top: 11px;
+  display: grid;
+  gap: 10px;
+}
+
+.interview-app--interviewer-flow .competency-item {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 31px minmax(0, 1fr) 42px;
+  gap: 7px;
+  align-items: center;
+}
+
+.interview-app--interviewer-flow .competency-icon {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  color: #198229;
+  background: #f0f7ed;
+  border-radius: 50%;
+}
+
+.interview-app--interviewer-flow .competency-icon--blue {
+  color: #1455b7;
+  background: #edf4ff;
+}
+
+.interview-app--interviewer-flow .competency-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.75;
+}
+
+.interview-app--interviewer-flow .competency-copy {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.interview-app--interviewer-flow .competency-copy strong {
+  overflow: hidden;
+  color: #293953;
+  font-size: 8.5px;
+  line-height: 1.25;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.interview-app--interviewer-flow .competency-track {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  display: block;
+  background: #e7edf5;
+  border-radius: 999px;
+}
+
+.interview-app--interviewer-flow .competency-track i {
+  height: 100%;
+  display: block;
+  background: #3ca442;
+  border-radius: inherit;
+}
+
+.interview-app--interviewer-flow .competency-track .score-blue {
+  background: #3478e5;
+}
+
+.interview-app--interviewer-flow .score-70 { width: 70%; }
+.interview-app--interviewer-flow .score-75 { width: 75%; }
+.interview-app--interviewer-flow .score-80 { width: 80%; }
+.interview-app--interviewer-flow .score-85 { width: 85%; }
+
+.interview-app--interviewer-flow .competency-score {
+  justify-self: end;
+  color: #173a79;
+  font-size: 9px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.interview-app--interviewer-flow .competency-score small {
+  color: #8090aa;
+  font-size: 7px;
+  font-weight: 500;
+}
+
+.interview-app--interviewer-flow .candidate-insight-note {
+  margin-top: 14px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 19px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  color: #0b55d6;
+  background: #f8fbff;
+  border: 1px solid #a9c9fa;
+  border-radius: 5px;
+}
+
+.interview-app--interviewer-flow .candidate-insight-note svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 1.8;
+}
+
+.interview-app--interviewer-flow .candidate-insight-note p {
+  margin: 0;
+  font-size: 8.5px;
+  line-height: 1.45;
+}
+
+.interview-app--interviewer-flow .interviewer-question-actions {
+  margin-top: 14px;
+}
+
+.interview-app--interviewer-flow .interviewer-question-actions .interview-secondary-button,
+.interview-app--interviewer-flow .interviewer-question-actions .interview-primary-button {
+  min-width: 0;
+  width: 190px;
+}
+
+@media (max-width:760px) {
+  .interview-app--interviewer-flow .interviewer-question-layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 12px;
+  }
+
+  .interview-app--interviewer-flow .interviewer-question-card {
+    padding: 18px 16px 16px;
+  }
+
+  .interview-app--interviewer-flow .candidate-insight-card {
+    padding: 12px;
+  }
+}
+
+@media (max-width:680px) {
+  .interview-app--interviewer-flow .interviewer-question-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-app--interviewer-flow .candidate-insight-card {
+    order: -1;
+  }
+
+  .interview-app--interviewer-flow .candidate-insight-header {
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+  }
+
+  .interview-app--interviewer-flow .competency-copy strong {
+    white-space: normal;
+  }
+
+  .interview-app--interviewer-flow .interviewer-question-actions .interview-secondary-button,
+  .interview-app--interviewer-flow .interviewer-question-actions .interview-primary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width:420px) {
+  .interview-app--interviewer-flow .interviewer-question-card,
+  .interview-app--interviewer-flow .interviewer-notes-card,
+  .interview-app--interviewer-flow .candidate-insight-card {
+    border-radius: 7px;
+  }
+
+  .interview-app--interviewer-flow .candidate-insight-header {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
+
+  .interview-app--interviewer-flow .candidate-cv-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 3px;
+  }
+
+  .interview-app--interviewer-flow .competency-item {
+    grid-template-columns: 29px minmax(0, 1fr) 39px;
+  }
+}
