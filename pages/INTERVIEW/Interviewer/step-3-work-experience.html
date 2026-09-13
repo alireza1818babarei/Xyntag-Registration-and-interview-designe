@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Werkervaring | Interviewer | Zorgpunt Connect</title>
+  <link rel="stylesheet" href="../interview.css">
+</head>
+<body class="interview-preview-page">
+  <div class="interview-app interview-app--flow interview-app--interviewer-flow">
+    <header class="interview-flow-header">
+      <div class="interview-flow-header__inner interview-flow-header__inner--interviewer">
+        <a class="interview-flow-brand" href="../interview-landing.html" aria-label="Zorgpunt Connect home">
+          <img src="../assets/zorgpunt-logo2.png" alt="Zorgpunt Connect">
+        </a>
+
+        <div class="interview-meeting-summary interview-meeting-summary--wide">
+          <strong>Kennismakingsgesprek</strong>
+          <span><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Donderdag 22 mei 2025 <i aria-hidden="true">|</i> 10:00 - 10:30</span>
+        </div>
+
+        <div class="interview-flow-user" aria-label="Armin Mehdizadeh, Interviewer">
+          <span class="interview-flow-user__avatar">AM</span>
+          <span><strong>Armin Mehdizadeh</strong><small>Interviewer</small></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="interview-flow-shell">
+      <nav class="interview-stepper" aria-label="Interview voortgang">
+        <ol>
+          <li class="is-complete"><span>1</span><strong>Welkom</strong></li>
+          <li class="is-complete"><span>2</span><strong>Over ZPC</strong></li>
+          <li class="is-active" aria-current="step"><span>3</span><strong>Vragen</strong></li>
+          <li><span>4</span><strong>Uw vragen</strong></li>
+          <li><span>5</span><strong>Onze verwachtingen</strong></li>
+          <li><span>6</span><strong>Afronding</strong></li>
+        </ol>
+      </nav>
+
+      <section class="work-experience-step-card work-experience-step-card--editor" aria-labelledby="interviewer-work-experience-title">
+        <header class="work-experience-heading">
+          <span class="work-experience-heading__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          </span>
+          <div>
+            <h1 id="interviewer-work-experience-title">Werkervaring (laatste 12 maanden)</h1>
+            <p>Controleer en vul de relevante werkervaring in de zorg van de afgelopen 12 maanden aan. De kandidaat ziet dezelfde informatie.</p>
+          </div>
+        </header>
+
+        <form class="work-experience-form" data-work-experience-form>
+          <div class="work-experience-editor-list" data-experience-list>
+            <fieldset class="work-experience-editor-card" data-experience-id="1">
+              <legend class="sr-only">Werkervaring 1</legend>
+              <span class="work-experience-index">1</span>
+
+              <div class="work-experience-editor-grid">
+                <label class="work-experience-field">
+                  <span>Organisatie / Cliënt</span>
+                  <input type="text" name="work_experience[0][organization]" value="Zorggroep Lindenhof" autocomplete="organization">
+                </label>
+
+                <div class="work-experience-period-fields">
+                  <span class="work-experience-field-label">Periode</span>
+                  <div class="work-experience-date-range">
+                    <label class="work-experience-date-field">
+                      <span class="sr-only">Startdatum</span>
+                      <input type="text" name="work_experience[0][start_date]" value="01-01-2025" inputmode="numeric" data-date-field>
+                      <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+                    </label>
+                    <span class="work-experience-date-separator" aria-hidden="true">–</span>
+                    <label class="work-experience-date-field">
+                      <span class="sr-only">Einddatum</span>
+                      <input type="text" name="work_experience[0][end_date]" value="30-04-2025" inputmode="numeric" data-date-field>
+                      <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+                    </label>
+                  </div>
+                </div>
+
+                <label class="work-experience-field">
+                  <span>Functie / Rol</span>
+                  <input type="text" name="work_experience[0][role]" value="Zorgmedewerker">
+                </label>
+
+                <label class="work-experience-field work-experience-field--duration">
+                  <span>Duur</span>
+                  <input type="text" name="work_experience[0][duration]" value="4 maanden" readonly>
+                </label>
+
+                <label class="work-experience-field work-experience-field--description">
+                  <span>Korte omschrijving van werkzaamheden</span>
+                  <textarea name="work_experience[0][description]" rows="2">Verzorging en begeleiding van cliënten op somatische afdeling.</textarea>
+                </label>
+              </div>
+
+              <button class="work-experience-remove" type="button" data-action="remove-experience" aria-label="Werkervaring 1 verwijderen">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg>
+              </button>
+            </fieldset>
+
+            <fieldset class="work-experience-editor-card" data-experience-id="2">
+              <legend class="sr-only">Werkervaring 2</legend>
+              <span class="work-experience-index">2</span>
+
+              <div class="work-experience-editor-grid">
+                <label class="work-experience-field">
+                  <span>Organisatie / Cliënt</span>
+                  <input type="text" name="work_experience[1][organization]" value="Ziekenhuis Amstelland" autocomplete="organization">
+                </label>
+
+                <div class="work-experience-period-fields">
+                  <span class="work-experience-field-label">Periode</span>
+                  <div class="work-experience-date-range">
+                    <label class="work-experience-date-field">
+                      <span class="sr-only">Startdatum</span>
+                      <input type="text" name="work_experience[1][start_date]" value="01-09-2024" inputmode="numeric" data-date-field>
+                      <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+                    </label>
+                    <span class="work-experience-date-separator" aria-hidden="true">–</span>
+                    <label class="work-experience-date-field">
+                      <span class="sr-only">Einddatum</span>
+                      <input type="text" name="work_experience[1][end_date]" value="31-12-2024" inputmode="numeric" data-date-field>
+                      <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+                    </label>
+                  </div>
+                </div>
+
+                <label class="work-experience-field">
+                  <span>Functie / Rol</span>
+                  <input type="text" name="work_experience[1][role]" value="Stagiaire Verpleegkundige">
+                </label>
+
+                <label class="work-experience-field work-experience-field--duration">
+                  <span>Duur</span>
+                  <input type="text" name="work_experience[1][duration]" value="4 maanden" readonly>
+                </label>
+
+                <label class="work-experience-field work-experience-field--description">
+                  <span>Korte omschrijving van werkzaamheden</span>
+                  <textarea name="work_experience[1][description]" rows="2">Stage op afdeling interne geneeskunde.</textarea>
+                </label>
+              </div>
+
+              <button class="work-experience-remove" type="button" data-action="remove-experience" aria-label="Werkervaring 2 verwijderen">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg>
+              </button>
+            </fieldset>
+
+            <fieldset class="work-experience-editor-card" data-experience-id="3">
+              <legend class="sr-only">Werkervaring 3</legend>
+              <span class="work-experience-index">3</span>
+
+              <div class="work-experience-editor-grid">
+                <label class="work-experience-field">
+                  <span>Organisatie / Cliënt</span>
+                  <input type="text" name="work_experience[2][organization]" value="De Zorgcirkel" autocomplete="organization">
+                </label>
+
+                <div class="work-experience-period-fields">
+                  <span class="work-experience-field-label">Periode</span>
+                  <div class="work-experience-date-range">
+                    <label class="work-experience-date-field">
+                      <span class="sr-only">Startdatum</span>
+                      <input type="text" name="work_experience[2][start_date]" value="01-05-2024" inputmode="numeric" data-date-field>
+                      <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+                    </label>
+                    <span class="work-experience-date-separator" aria-hidden="true">–</span>
+                    <label class="work-experience-date-field">
+                      <span class="sr-only">Einddatum</span>
+                      <input type="text" name="work_experience[2][end_date]" value="31-08-2024" inputmode="numeric" data-date-field>
+                      <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+                    </label>
+                  </div>
+                </div>
+
+                <label class="work-experience-field">
+                  <span>Functie / Rol</span>
+                  <input type="text" name="work_experience[2][role]" value="Helpende Zorg en Welzijn">
+                </label>
+
+                <label class="work-experience-field work-experience-field--duration">
+                  <span>Duur</span>
+                  <input type="text" name="work_experience[2][duration]" value="4 maanden" readonly>
+                </label>
+
+                <label class="work-experience-field work-experience-field--description">
+                  <span>Korte omschrijving van werkzaamheden</span>
+                  <textarea name="work_experience[2][description]" rows="2">Ondersteuning bij ADL, huishoudelijke taken en begeleiding.</textarea>
+                </label>
+              </div>
+
+              <button class="work-experience-remove" type="button" data-action="remove-experience" aria-label="Werkervaring 3 verwijderen">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg>
+              </button>
+            </fieldset>
+          </div>
+
+          <button class="work-experience-add" type="button" data-action="add-experience">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <span>Voeg werkervaring toe</span>
+          </button>
+
+          <aside class="work-experience-total" aria-label="Totaal relevante werkervaring">
+            <span class="work-experience-total__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m7 12 3 3 7-7"/></svg>
+            </span>
+            <p>Dit is in totaal <strong>12 maanden</strong> relevante werkervaring in de laatste 12 maanden.</p>
+          </aside>
+        </form>
+      </section>
+
+      <div class="work-experience-actions-row">
+        <nav class="interviewer-step-actions work-experience-step-actions" aria-label="Werkervaring navigatie">
+          <a class="interview-secondary-button" href="./step-3.html">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5M10 7l-5 5 5 5"/></svg>
+            <span>Vorige stap</span>
+          </a>
+          <a class="interview-primary-button" href="#" data-action="next-step-3-screen">
+            <span>Volgende stap</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+          </a>
+        </nav>
+
+        <p class="work-experience-sync-note">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m7 12 3 3 7-7"/></svg></span>
+          Wijzigingen worden direct gedeeld met de kandidaat.
+        </p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
