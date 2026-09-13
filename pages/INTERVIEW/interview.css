@@ -3203,3 +3203,491 @@ Step 3 - Vragen (Interviewer)
     grid-template-columns: 29px minmax(0, 1fr) 39px;
   }
 }
+
+/* =========================================================
+Step 3 - Work experience (Candidate + Interviewer)
+========================================================= */
+.interview-app--flow .work-experience-step-card {
+  padding: 24px 20px 22px;
+  background: #fff;
+  border: 1px solid var(--interview-border-soft);
+  border-radius: 9px;
+  box-shadow: var(--app-shadow-subtle);
+}
+
+.interview-app--flow .work-experience-heading {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.interview-app--flow .work-experience-heading__icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: #198229;
+  background: #eff7ec;
+  border-radius: 50%;
+}
+
+.interview-app--flow .work-experience-heading__icon svg {
+  width: 31px;
+  height: 31px;
+  stroke-width: 1.75;
+}
+
+.interview-app--flow .work-experience-heading h1 {
+  margin: 0;
+  color: var(--interview-navy);
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  font-weight: 850;
+}
+
+.interview-app--flow .work-experience-heading p {
+  max-width: 620px;
+  margin: 5px 0 0;
+  color: #536381;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+.interview-app--flow .work-experience-list,
+.interview-app--flow .work-experience-editor-list {
+  margin-top: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.interview-app--flow .work-experience-index {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  color: #0b3f9f;
+  background: #eaf1ff;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.interview-app--flow .work-experience-display-card {
+  min-width: 0;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 150px;
+  gap: 16px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid #d5e0f0;
+  border-radius: 7px;
+}
+
+.interview-app--flow .work-experience-display-card__main {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.interview-app--flow .work-experience-display-card__main strong {
+  color: var(--interview-navy);
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.interview-app--flow .work-experience-display-card__main > span {
+  color: var(--interview-navy);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.interview-app--flow .work-experience-display-card__main p {
+  margin: 11px 0 0;
+  padding: 12px;
+  color: #536381;
+  background: #f4f7fc;
+  border-radius: 5px;
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+.interview-app--flow .work-experience-period {
+  display: grid;
+  justify-items: start;
+  gap: 5px;
+  color: #52638a;
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+.interview-app--flow .work-experience-period small {
+  color: #627292;
+  font-size: 10px;
+}
+
+.interview-app--flow .work-experience-total {
+  min-height: 52px;
+  margin-top: 18px;
+  padding: 12px 15px;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  color: #286c2d;
+  background: #f4faf1;
+  border: 1px solid #cae5c4;
+  border-radius: 6px;
+}
+
+.interview-app--flow .work-experience-total__icon,
+.interview-app--flow .work-experience-sync-note > span {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #2e8a34;
+  border-radius: 50%;
+}
+
+.interview-app--flow .work-experience-total__icon svg,
+.interview-app--flow .work-experience-sync-note > span svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+.interview-app--flow .work-experience-total p {
+  margin: 0;
+  color: #356b39;
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+.interview-app--flow .work-experience-total strong {
+  color: #145c1d;
+  font-weight: 800;
+}
+
+.interview-app--flow .work-experience-form,
+.interview-app--flow .work-experience-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.interview-app--flow .work-experience-editor-card {
+  min-width: 0;
+  position: relative;
+  padding: 14px 42px 14px 14px !important;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid #d5e0f0 !important;
+  border-radius: 7px;
+}
+
+.interview-app--flow .work-experience-editor-grid {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+  gap: 8px 16px;
+}
+
+.interview-app--flow .work-experience-field,
+.interview-app--flow .work-experience-period-fields {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.interview-app--flow .work-experience-field > span,
+.interview-app--flow .work-experience-field-label {
+  color: #3f5377;
+  font-size: 9.5px;
+  line-height: 1.3;
+}
+
+.interview-app--flow .work-experience-field input,
+.interview-app--flow .work-experience-field textarea,
+.interview-app--flow .work-experience-date-field input {
+  width: 100%;
+  color: var(--interview-navy);
+  background: #fff;
+  border: 1px solid #c7d3e6;
+  border-radius: 5px;
+  outline: none;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.interview-app--flow .work-experience-field input,
+.interview-app--flow .work-experience-date-field input {
+  height: 34px;
+  padding: 0 10px;
+}
+
+.interview-app--flow .work-experience-field textarea {
+  min-height: 42px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.interview-app--flow .work-experience-field input:focus,
+.interview-app--flow .work-experience-field textarea:focus,
+.interview-app--flow .work-experience-date-field input:focus {
+  border-color: var(--interview-blue);
+  box-shadow: var(--app-focus-ring);
+}
+
+.interview-app--flow .work-experience-field--duration input[readonly] {
+  color: #4d5f80;
+  background: #f4f6f9;
+}
+
+.interview-app--flow .work-experience-field--description {
+  grid-column: 1 / -1;
+}
+
+.interview-app--flow .work-experience-date-range {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 10px minmax(0, 1fr);
+  gap: 6px;
+  align-items: center;
+}
+
+.interview-app--flow .work-experience-date-field {
+  min-width: 0;
+  position: relative;
+}
+
+.interview-app--flow .work-experience-date-field input {
+  padding-right: 31px;
+}
+
+.interview-app--flow .work-experience-date-field svg {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  transform: translateY(-50%);
+  color: #385487;
+  pointer-events: none;
+  stroke-width: 1.7;
+}
+
+.interview-app--flow .work-experience-date-separator {
+  color: #6e7d99;
+  font-size: 10px;
+  text-align: center;
+}
+
+.interview-app--flow .work-experience-remove {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: #ef4444;
+  background: #fff1f1;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.interview-app--flow .work-experience-remove svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.8;
+}
+
+.interview-app--flow .work-experience-add {
+  width: fit-content;
+  min-height: 34px;
+  margin-top: 12px;
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #1455b7;
+  background: #fff;
+  border: 1px solid #85abec;
+  border-radius: 5px;
+  font-size: 9.5px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.interview-app--flow .work-experience-add svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 1.8;
+}
+
+.interview-app--flow .work-experience-add:focus-visible,
+.interview-app--flow .work-experience-remove:focus-visible {
+  outline: none;
+  box-shadow: var(--app-focus-ring);
+}
+
+.interview-app--flow .work-experience-actions-row {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 16px;
+  align-items: center;
+}
+
+.interview-app--flow .work-experience-step-actions {
+  margin: 0;
+  padding: 14px;
+}
+
+.interview-app--flow .work-experience-step-actions .interview-secondary-button,
+.interview-app--flow .work-experience-step-actions .interview-primary-button {
+  min-width: 0;
+  width: 190px;
+}
+
+.interview-app--flow .work-experience-sync-note {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 9px;
+  align-items: center;
+  color: #536381;
+  font-size: 9.5px;
+  line-height: 1.45;
+}
+
+@media (max-width:760px) {
+  .interview-app--flow .work-experience-step-card {
+    padding: 18px 16px 16px;
+  }
+
+  .interview-app--flow .work-experience-heading {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .interview-app--flow .work-experience-heading__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .interview-app--flow .work-experience-heading__icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .interview-app--flow .work-experience-heading h1 {
+    font-size: 19px;
+  }
+
+  .interview-app--flow .work-experience-heading p {
+    font-size: 10.5px;
+  }
+
+  .interview-app--flow .work-experience-display-card {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .interview-app--flow .work-experience-period {
+    grid-column: 2;
+  }
+
+  .interview-app--flow .work-experience-editor-card {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .interview-app--flow .work-experience-editor-grid {
+    gap: 8px 12px;
+  }
+
+  .interview-app--flow .work-experience-actions-row {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-app--flow .work-experience-sync-note {
+    order: -1;
+  }
+
+  .interview-app--flow .work-experience-step-actions .interview-secondary-button,
+  .interview-app--flow .work-experience-step-actions .interview-primary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width:620px) {
+  .interview-app--flow .work-experience-editor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-app--flow .work-experience-field--description {
+    grid-column: auto;
+  }
+}
+
+@media (max-width:480px) {
+  .interview-app--flow .work-experience-heading {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .interview-app--flow .work-experience-heading__icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .interview-app--flow .work-experience-heading h1 {
+    font-size: 17px;
+  }
+
+  .interview-app--flow .work-experience-display-card,
+  .interview-app--flow .work-experience-editor-card {
+    padding: 13px !important;
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .interview-app--flow .work-experience-index {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+
+  .interview-app--flow .work-experience-remove {
+    position: static;
+    grid-column: 2;
+    justify-self: end;
+    margin-top: 4px;
+  }
+
+  .interview-app--flow .work-experience-date-range {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-app--flow .work-experience-date-separator {
+    display: none;
+  }
+
+  .interview-app--flow .work-experience-add {
+    width: 100%;
+  }
+
+  .interview-app--flow .work-experience-total {
+    padding: 11px 12px;
+  }
+}
