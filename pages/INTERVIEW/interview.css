@@ -2617,3 +2617,164 @@ Step 2 - Over ZPC
     width: calc(100% - 32px);
   }
 }
+
+/* =========================================================
+Step 3 - Vragen (Candidate)
+========================================================= */
+.interview-app--flow .question-step-card {
+  min-height: 610px;
+  padding: 26px 28px 24px;
+  background: #fff;
+  border: 1px solid var(--interview-border-soft);
+  border-radius: 9px;
+  box-shadow: var(--app-shadow-subtle);
+}
+
+.interview-app--flow .question-step-header {
+  position: relative;
+  padding-right: 66px;
+}
+
+.interview-app--flow .question-step-copy {
+  min-width: 0;
+}
+
+.interview-app--flow .question-step-progress {
+  margin: 0 0 10px;
+  color: #5c6b88;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.interview-app--flow .question-step-category {
+  width: fit-content;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  color: #1858bf;
+  background: #edf4ff;
+  border-radius: 5px;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.interview-app--flow .question-step-copy h1 {
+  max-width: 610px;
+  margin: 14px 0 0;
+  color: var(--interview-navy);
+  font-size: 21px;
+  line-height: 1.38;
+  letter-spacing: -.015em;
+  font-weight: 850;
+}
+
+.interview-app--flow .question-step-helper {
+  margin: 12px 0 0;
+  color: #596987;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.interview-app--flow .question-step-chat-icon {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  color: #178629;
+  background: #edf7e9;
+  border-radius: 50%;
+}
+
+.interview-app--flow .question-step-chat-icon svg {
+  width: 27px;
+  height: 27px;
+  stroke-width: 1.75;
+}
+
+.interview-app--flow .question-step-illustration {
+  width: min(100%, 470px);
+  margin: 26px auto 0;
+  display: grid;
+  place-items: center;
+}
+
+.interview-app--flow .question-step-illustration img {
+  width: 100%;
+  height: auto;
+  max-height: 310px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.interview-app--flow .question-step-info {
+  margin-top: 18px;
+}
+
+@media (max-width:760px) {
+  .interview-app--flow .question-step-card {
+    min-height: 0;
+    padding: 18px 16px 16px;
+  }
+
+  .interview-app--flow .question-step-header {
+    padding-right: 52px;
+  }
+
+  .interview-app--flow .question-step-chat-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .interview-app--flow .question-step-chat-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .interview-app--flow .question-step-copy h1 {
+    font-size: 18px;
+    line-height: 1.42;
+  }
+
+  .interview-app--flow .question-step-helper {
+    font-size: 11.5px;
+  }
+
+  .interview-app--flow .question-step-illustration {
+    width: min(100%, 390px);
+    margin-top: 22px;
+  }
+
+  .interview-app--flow .question-step-illustration img {
+    max-height: 275px;
+  }
+}
+
+@media (max-width:420px) {
+  .interview-app--flow .question-step-card {
+    padding-inline: 13px;
+  }
+
+  .interview-app--flow .question-step-header {
+    padding-right: 0;
+  }
+
+  .interview-app--flow .question-step-chat-icon {
+    position: static;
+    width: 38px;
+    height: 38px;
+    margin: 12px 0 0 auto;
+  }
+
+  .interview-app--flow .question-step-copy h1 {
+    font-size: 17px;
+  }
+
+  .interview-app--flow .question-step-illustration {
+    margin-top: 18px;
+  }
+}
