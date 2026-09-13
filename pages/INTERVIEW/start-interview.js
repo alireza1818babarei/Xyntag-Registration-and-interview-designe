@@ -26,4 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
       panel.hidden = !willOpen;
     });
   });
+
+  const startInterviewButton = document.querySelector(
+    '[data-action="start-interview"]'
+  );
+
+  if (startInterviewButton) {
+    startInterviewButton.addEventListener("click", () => {
+      window.location.href = "./interview-landing.html";
+    });
+  }
 });
