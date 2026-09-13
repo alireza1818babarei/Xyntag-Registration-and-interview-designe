@@ -1,0 +1,614 @@
+/* =========================================================
+   Interview flow - shared steps
+   ========================================================= */
+.interview-app--flow {
+  background: #fff;
+}
+
+.interview-app--flow .interview-flow-header {
+  min-height: 92px;
+  background: #fff;
+  border-bottom: 1px solid var(--interview-border-soft);
+}
+
+.interview-app--flow .interview-flow-header__inner {
+  width: min(100% - 72px, 1420px);
+  min-height: 92px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.interview-app--flow .interview-flow-header__inner--interviewer {
+  display: grid;
+  grid-template-columns: minmax(210px, 1fr) auto minmax(210px, 1fr);
+}
+
+.interview-app--flow .interview-flow-brand {
+  width: 220px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.interview-app--flow .interview-flow-brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.interview-app--flow .interview-meeting-summary {
+  display: grid;
+  justify-items: start;
+  gap: 6px;
+  color: var(--interview-navy);
+}
+
+.interview-app--candidate-flow .interview-meeting-summary {
+  margin-left: auto;
+  min-width: 250px;
+}
+
+.interview-app--flow .interview-meeting-summary strong {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.interview-app--flow .interview-meeting-summary span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #4a5a7a;
+  font-size: 12px;
+}
+
+.interview-app--flow .interview-meeting-summary svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.7;
+}
+
+.interview-app--flow .interview-meeting-summary i {
+  color: #a8b3c4;
+  font-style: normal;
+}
+
+.interview-app--flow .interview-flow-user {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--interview-navy);
+}
+
+.interview-app--flow .interview-flow-user__avatar {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #1858bf;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.interview-app--flow .interview-flow-user > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.interview-app--flow .interview-flow-user strong {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.interview-app--flow .interview-flow-user small {
+  color: #4c5b77;
+  font-size: 10px;
+}
+
+.interview-app--flow .interview-flow-shell {
+  width: min(100% - 72px, 1420px);
+  margin-inline: auto;
+  padding: 24px 0 46px;
+}
+
+.interview-app--flow .interview-stepper {
+  width: min(100%, 880px);
+  margin: 0 auto 22px;
+}
+
+.interview-app--flow .interview-stepper ol {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  list-style: none;
+}
+
+.interview-app--flow .interview-stepper li {
+  min-width: 0;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  color: #506187;
+  font-size: 11px;
+  text-align: center;
+}
+
+.interview-app--flow .interview-stepper li:not(:last-child)::after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 16px;
+  left: calc(50% + 23px);
+  right: calc(-50% + 23px);
+  background: #c8d3e5;
+}
+
+.interview-app--flow .interview-stepper li span {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  color: #385078;
+  background: #fff;
+  border: 1px solid #9eb1d4;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.interview-app--flow .interview-stepper li strong {
+  min-height: 28px;
+  font-weight: 500;
+}
+
+.interview-app--flow .interview-stepper li.is-active {
+  color: var(--interview-navy);
+}
+
+.interview-app--flow .interview-stepper li.is-active span {
+  color: #fff;
+  background: var(--app-gradient-primary);
+  border-color: var(--app-color-primary);
+}
+
+.interview-app--flow .interview-stepper li.is-active strong {
+  font-weight: 800;
+}
+
+/* =========================================================
+   Step 1 - Welcome
+   ========================================================= */
+.interview-app--flow .welcome-step-card {
+  min-height: 625px;
+  padding: 28px 32px 26px;
+  background: #fff;
+  border: 1px solid var(--interview-border-soft);
+  border-radius: 9px;
+  box-shadow: var(--app-shadow-subtle);
+}
+
+.interview-app--flow .welcome-step-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 42px;
+  align-items: start;
+}
+
+.interview-app--flow .welcome-step-copy {
+  max-width: 680px;
+}
+
+.interview-app--flow .welcome-step-accent {
+  width: 34px;
+  height: 3px;
+  display: block;
+  margin-bottom: 18px;
+  background: var(--interview-green);
+  border-radius: 999px;
+}
+
+.interview-app--flow .welcome-step-copy h1 {
+  margin: 0;
+  color: var(--interview-navy);
+  font-size: clamp(35px, 3vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -.03em;
+  font-weight: 850;
+}
+
+.interview-app--flow .welcome-step-copy h2 {
+  margin: 6px 0 0;
+  color: var(--interview-navy);
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.interview-app--flow .welcome-step-copy > p {
+  max-width: 650px;
+  margin: 18px 0 0;
+  color: #465573;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.interview-app--flow .welcome-step-photo {
+  width: 280px;
+  aspect-ratio: 1.08;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #f4f6f3;
+}
+
+.interview-app--flow .welcome-step-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.interview-app--flow .welcome-expectations {
+  margin-top: 10px;
+}
+
+.interview-app--flow .welcome-expectations h3 {
+  margin: 0 0 13px;
+  color: var(--interview-navy);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.interview-app--flow .welcome-expectation-list {
+  display: grid;
+  gap: 12px;
+}
+
+.interview-app--flow .welcome-expectation-list article {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 15px;
+  align-items: center;
+}
+
+.interview-app--flow .welcome-expectation-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  color: #198229;
+  background: #f0f7ed;
+  border-radius: 50%;
+}
+
+.interview-app--flow .welcome-expectation-icon svg {
+  width: 29px;
+  height: 29px;
+  stroke-width: 1.8;
+}
+
+.interview-app--flow .welcome-expectation-list strong {
+  color: var(--interview-navy);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.interview-app--flow .welcome-expectation-list p {
+  margin: 4px 0 0;
+  color: #5b6a88;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.interview-app--flow .welcome-info-banner {
+  margin-top: 20px;
+  min-height: 58px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #0b55d6;
+  background: #f8fbff;
+  border: 1px solid #9dc2ff;
+  border-radius: 7px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.interview-app--flow .welcome-info-banner svg {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  stroke-width: 1.8;
+}
+
+.interview-app--flow .candidate-flow-footer {
+  width: min(100%, 650px);
+  margin: 70px auto 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.interview-app--flow .candidate-flow-footer span {
+  height: 1px;
+  background: #b8c8e2;
+}
+
+.interview-app--flow .candidate-flow-footer p {
+  margin: 0;
+  color: #61739a;
+  font-size: 10px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.interview-app--flow .interviewer-step-actions {
+  margin-top: 18px;
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid var(--interview-border-soft);
+  border-radius: 8px;
+  box-shadow: var(--app-shadow-subtle);
+}
+
+.interview-app--flow .interview-secondary-button,
+.interview-app--flow .interview-primary-button {
+  min-height: 52px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.interview-app--flow .interview-secondary-button {
+  min-width: 230px;
+  color: #35466e;
+  background: #fff;
+  border: 1px solid #9eb1d4;
+}
+
+.interview-app--flow .interview-primary-button {
+  min-width: 310px;
+  color: #fff;
+  background: var(--app-gradient-primary);
+  border: 1px solid var(--app-color-primary);
+  box-shadow: var(--app-shadow-primary);
+}
+
+.interview-app--flow .interview-secondary-button svg,
+.interview-app--flow .interview-primary-button svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+}
+
+.interview-app--flow .interview-secondary-button:focus-visible,
+.interview-app--flow .interview-primary-button:focus-visible {
+  outline: none;
+  box-shadow: var(--app-focus-ring);
+}
+
+@media (max-width: 1180px) {
+  .interview-app--flow .interview-flow-shell,
+  .interview-app--flow .interview-flow-header__inner {
+    width: min(100% - 40px, 980px);
+  }
+
+  .interview-app--flow .welcome-step-content {
+    grid-template-columns: minmax(0, 1fr) 245px;
+    gap: 28px;
+  }
+
+  .interview-app--flow .welcome-step-photo {
+    width: 245px;
+  }
+}
+
+@media (max-width: 860px) {
+  .interview-app--flow .interview-flow-header__inner--interviewer {
+    grid-template-columns: auto 1fr;
+  }
+
+  .interview-app--flow .interview-meeting-summary--wide {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    padding-bottom: 12px;
+  }
+
+  .interview-app--flow .interview-flow-user {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .interview-app--flow .welcome-step-card {
+    padding: 24px;
+  }
+
+  .interview-app--flow .welcome-step-content {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-app--flow .welcome-step-photo {
+    width: min(100%, 420px);
+    justify-self: center;
+    aspect-ratio: 1.25;
+  }
+}
+
+@media (max-width: 760px) {
+  .interview-app--flow .interview-flow-header,
+  .interview-app--flow .interview-flow-header__inner {
+    min-height: 76px;
+  }
+
+  .interview-app--flow .interview-flow-header__inner,
+  .interview-app--flow .interview-flow-header__inner--interviewer {
+    width: 100%;
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+
+  .interview-app--flow .interview-flow-brand {
+    width: 165px;
+    height: 44px;
+  }
+
+  .interview-app--candidate-flow .interview-meeting-summary,
+  .interview-app--flow .interview-meeting-summary--wide {
+    margin: 0;
+    min-width: 0;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: start;
+    padding: 0 0 2px;
+  }
+
+  .interview-app--flow .interview-meeting-summary strong {
+    font-size: 11px;
+  }
+
+  .interview-app--flow .interview-meeting-summary span {
+    font-size: 10px;
+  }
+
+  .interview-app--flow .interview-flow-user {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .interview-app--flow .interview-flow-user > span:last-child {
+    display: none;
+  }
+
+  .interview-app--flow .interview-flow-user__avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .interview-app--flow .interview-flow-shell {
+    width: 100%;
+    padding: 18px 12px 28px;
+  }
+
+  .interview-app--flow .interview-stepper {
+    margin-bottom: 18px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .interview-app--flow .interview-stepper ol {
+    min-width: 620px;
+  }
+
+  .interview-app--flow .interview-stepper li strong {
+    font-size: 9px;
+  }
+
+  .interview-app--flow .welcome-step-card {
+    min-height: 0;
+    padding: 18px 16px 16px;
+  }
+
+  .interview-app--flow .welcome-step-content {
+    gap: 20px;
+  }
+
+  .interview-app--flow .welcome-step-copy h1 {
+    font-size: 34px;
+  }
+
+  .interview-app--flow .welcome-step-copy h2 {
+    font-size: 20px;
+  }
+
+  .interview-app--flow .welcome-step-copy > p {
+    font-size: 13px;
+  }
+
+  .interview-app--flow .welcome-step-photo {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1.1;
+  }
+
+  .interview-app--flow .welcome-expectations {
+    margin-top: 24px;
+  }
+
+  .interview-app--flow .welcome-expectation-list article {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .interview-app--flow .welcome-expectation-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .interview-app--flow .welcome-expectation-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .interview-app--flow .welcome-expectation-list strong {
+    font-size: 12.5px;
+  }
+
+  .interview-app--flow .welcome-expectation-list p {
+    font-size: 11.5px;
+  }
+
+  .interview-app--flow .welcome-info-banner {
+    font-size: 11px;
+  }
+
+  .interview-app--flow .candidate-flow-footer {
+    margin-top: 38px;
+  }
+
+  .interview-app--flow .interviewer-step-actions {
+    padding: 12px;
+    flex-direction: column-reverse;
+  }
+
+  .interview-app--flow .interview-secondary-button,
+  .interview-app--flow .interview-primary-button {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 420px) {
+  .interview-app--flow .interview-flow-shell {
+    padding-inline: 9px;
+  }
+
+  .interview-app--flow .welcome-step-card {
+    padding-inline: 13px;
+  }
+}
