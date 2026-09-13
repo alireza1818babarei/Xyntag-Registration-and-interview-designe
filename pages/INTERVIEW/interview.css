@@ -128,6 +128,10 @@ body.interview-preview-page {
   stroke-width: 1.7;
 }
 
+.app-menu {
+  display: none !important;
+}
+
 .interview-app .notification-badge {
   min-width: 16px;
   height: 16px;
@@ -700,6 +704,10 @@ body.interview-preview-page {
   body.interview-preview-page {
     background: #fff;
   }
+  
+  .app-menu {
+    display: block !important;
+  }
 
   .interview-app .interview-header,
   .interview-app .interview-header__inner {
@@ -813,8 +821,7 @@ body.interview-preview-page {
   .interview-app .schedule-banner {
     min-height: 0;
     padding: 17px 16px;
-    display: grid;
-    gap: 15px;
+    display: block;
     border-radius: 6px;
   }
 
@@ -834,6 +841,7 @@ body.interview-preview-page {
   .interview-app .schedule-edit-button {
     width: 100%;
     min-height: 36px;
+    margin-top: 15px;
   }
 
   .interview-app .start-card {
