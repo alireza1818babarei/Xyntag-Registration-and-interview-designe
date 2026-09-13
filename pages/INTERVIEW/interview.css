@@ -704,7 +704,7 @@ body.interview-preview-page {
   body.interview-preview-page {
     background: #fff;
   }
-  
+
   .app-menu {
     display: block !important;
   }
@@ -980,6 +980,21 @@ body.interview-preview-page {
   font-weight: 800;
 }
 
+.interview-app--landing .welcome-wave {
+  width: .9em;
+  height: .9em;
+  display: inline-flex;
+  margin-left: 5px;
+  color: #f3a51c;
+  vertical-align: -.12em;
+}
+
+.interview-app--landing .welcome-wave svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.65;
+}
+
 .interview-app--landing .interview-landing-copy p {
   max-width: 480px;
   margin: 18px 0 0;
@@ -990,12 +1005,17 @@ body.interview-preview-page {
 
 .interview-app--landing .interview-landing-illustration {
   min-width: 0;
+  display: grid;
+  place-items: end center;
 }
 
-.interview-app--landing .interview-landing-illustration svg {
+.interview-app--landing .interview-landing-illustration img {
   width: 100%;
+  max-width: 470px;
   height: auto;
   max-height: 245px;
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 .interview-app--landing .how-it-works-card {
@@ -1085,7 +1105,7 @@ body.interview-preview-page {
 
 .interview-app--landing .conversation-grid {
   display: grid;
-  grid-template-columns: 1.06fr 1fr 1fr 1fr 1.08fr;
+  grid-template-columns: 1.12fr 1fr 1fr 1fr 1.08fr;
   gap: 18px;
 }
 
@@ -1102,9 +1122,22 @@ body.interview-preview-page {
   border-radius: 8px;
 }
 
+.interview-app--landing .conversation-item--person {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.interview-app--landing .conversation-item__heading {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .interview-app--landing .conversation-item__icon {
   width: 34px;
   height: 34px;
+  flex: 0 0 34px;
   display: grid;
   place-items: center;
   color: var(--interview-green);
@@ -1123,11 +1156,35 @@ body.interview-preview-page {
   stroke-width: 1.7;
 }
 
-.interview-app--landing .conversation-item > div {
+.interview-app--landing .conversation-item > div:not(.conversation-item__heading):not(.conversation-person),
+.interview-app--landing .conversation-person__details {
   min-width: 0;
   display: grid;
   gap: 5px;
   align-content: start;
+}
+
+.interview-app--landing .conversation-person {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.interview-app--landing .conversation-person__avatar {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--interview-border-soft);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(20, 31, 51, .08);
+}
+
+.interview-app--landing .conversation-person__details span {
+  color: var(--interview-navy);
+  font-weight: 700;
 }
 
 .interview-app--landing .conversation-item strong {
@@ -1143,6 +1200,7 @@ body.interview-preview-page {
   font-size: 10.5px;
   line-height: 1.45;
   font-style: normal;
+  overflow-wrap: anywhere;
 }
 
 .interview-app--landing .conversation-item em {
@@ -1164,7 +1222,7 @@ body.interview-preview-page {
 
 .interview-app--landing .role-card {
   min-width: 0;
-  padding: 18px 22px 20px;
+  padding: 20px 22px;
   display: flex;
   flex-direction: column;
   border-radius: 9px;
@@ -1181,22 +1239,35 @@ body.interview-preview-page {
   border: 1px solid #bdd0ee;
 }
 
+.interview-app--landing .role-card__top {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(190px, .92fr) minmax(0, 1.08fr);
+  gap: 22px;
+  align-items: center;
+}
+
 .interview-app--landing .role-card__visual {
+  min-width: 0;
   min-height: 170px;
   display: grid;
   place-items: center;
 }
 
-.interview-app--landing .role-card__visual svg {
-  width: min(100%, 300px);
-  height: auto;
+.interview-app--landing .role-card__visual img {
+  width: 100%;
+  max-width: 330px;
+  height: 175px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .interview-app--landing .role-card__intro {
-  margin-top: 2px;
+  min-width: 0;
   display: grid;
   grid-template-columns: 46px minmax(0, 1fr);
   gap: 15px;
+  align-items: start;
 }
 
 .interview-app--landing .role-card__icon {
@@ -1236,7 +1307,7 @@ body.interview-preview-page {
 }
 
 .interview-app--landing .role-feature-grid {
-  margin-top: 22px;
+  margin-top: 18px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
@@ -1395,13 +1466,32 @@ body.interview-preview-page {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .interview-app--landing .conversation-item:nth-child(4),
-  .interview-app--landing .conversation-item:nth-child(5) {
-    grid-column: span 1;
+  .interview-app--landing .role-card__top {
+    grid-template-columns: minmax(155px, .82fr) minmax(0, 1.18fr);
+    gap: 14px;
+  }
+
+  .interview-app--landing .role-card__visual img {
+    height: 150px;
   }
 
   .interview-app--landing .role-feature-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .interview-app--landing .role-card__top {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-app--landing .role-card__visual {
+    min-height: 145px;
+  }
+
+  .interview-app--landing .role-card__visual img {
+    width: min(100%, 300px);
+    height: 150px;
   }
 }
 
@@ -1421,6 +1511,12 @@ body.interview-preview-page {
 
   .interview-app--landing .interview-landing-copy h1 {
     font-size: 28px;
+  }
+
+  .interview-app--landing .welcome-wave {
+    width: 30px;
+    height: 30px;
+    vertical-align: -6px;
   }
 
   .interview-app--landing .interview-landing-copy p {
@@ -1453,6 +1549,20 @@ body.interview-preview-page {
     min-height: 0;
   }
 
+  .interview-app--landing .conversation-item--person {
+    gap: 10px;
+  }
+
+  .interview-app--landing .conversation-person {
+    grid-template-columns: 44px minmax(0, 1fr);
+    padding-left: 3px;
+  }
+
+  .interview-app--landing .conversation-person__avatar {
+    width: 44px;
+    height: 44px;
+  }
+
   .interview-app--landing .role-selection {
     margin-top: 16px;
     grid-template-columns: 1fr;
@@ -1463,8 +1573,16 @@ body.interview-preview-page {
     padding: 16px;
   }
 
+  .interview-app--landing .role-card__top {
+    grid-template-columns: 1fr;
+  }
+
   .interview-app--landing .role-card__visual {
     min-height: 145px;
+  }
+
+  .interview-app--landing .role-card__visual img {
+    height: 145px;
   }
 
   .interview-app--landing .role-card__intro {
@@ -1512,6 +1630,10 @@ body.interview-preview-page {
 
   .interview-app--landing .role-card__visual {
     min-height: 130px;
+  }
+
+  .interview-app--landing .role-card__visual img {
+    height: 130px;
   }
 
   .interview-app--landing .role-feature-grid > div {
