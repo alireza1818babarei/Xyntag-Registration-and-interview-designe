@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uw vragen | Interviewer | Zorgpunt Connect</title>
+  <link rel="stylesheet" href="../interview.css">
+</head>
+<body class="interview-preview-page">
+  <div class="interview-app interview-app--flow interview-app--interviewer-flow" data-interview-step="4" data-role="interviewer">
+    <header class="interview-flow-header">
+      <div class="interview-flow-header__inner interview-flow-header__inner--interviewer">
+        <a class="interview-flow-brand" href="../interview-landing.html" aria-label="Zorgpunt Connect home">
+          <img src="../assets/zorgpunt-logo2.png" alt="Zorgpunt Connect">
+        </a>
+
+        <div class="interview-meeting-summary interview-meeting-summary--wide">
+          <strong>Kennismakingsgesprek</strong>
+          <span>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <rect x="3" y="5" width="18" height="16" rx="2"/>
+              <path d="M8 3v4M16 3v4M3 10h18"/>
+            </svg>
+            Donderdag 22 mei 2025 <i aria-hidden="true">|</i> 10:00 - 10:30
+          </span>
+        </div>
+
+        <div class="interview-flow-user" aria-label="Armin Mehdizadeh, Interviewer">
+          <span class="interview-flow-user__avatar">AM</span>
+          <span>
+            <strong>Armin Mehdizadeh</strong>
+            <small>Interviewer</small>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main class="interview-flow-shell">
+      <nav class="interview-stepper" aria-label="Interview voortgang">
+        <ol>
+          <li class="is-complete"><span>1</span><strong>Welkom</strong></li>
+          <li class="is-complete"><span>2</span><strong>Over ZPC</strong></li>
+          <li class="is-complete"><span>3</span><strong>Vragen</strong></li>
+          <li class="is-active" aria-current="step"><span>4</span><strong>Uw vragen</strong></li>
+          <li><span>5</span><strong>Onze verwachtingen</strong></li>
+          <li><span>6</span><strong>Afronding</strong></li>
+        </ol>
+      </nav>
+
+      <section class="interviewer-questions-step-card" aria-labelledby="interviewer-questions-title">
+        <div class="interviewer-questions-hero">
+          <div class="interviewer-questions-copy">
+            <span class="questions-step-accent" aria-hidden="true"></span>
+            <h1 id="interviewer-questions-title">Heeft de kandidaat nog vragen?</h1>
+            <h2>Dit is het moment voor de kandidaat om vragen te stellen.</h2>
+            <p>Laat de kandidaat vrijuit vragen stellen. Dit geeft inzicht in interesse, betrokkenheid en verwachtingen.</p>
+          </div>
+
+          <figure class="interviewer-questions-visual">
+            <img src="../assets/step-4-interviewer-questions.webp" alt="Illustratie van twee gespreksballonnen met een vraagteken">
+          </figure>
+        </div>
+
+        <form class="interviewer-questions-tools" aria-label="Notities en observaties voor deze stap">
+          <section class="step4-tool-card" aria-labelledby="step4-notes-title">
+            <div class="step4-tool-title">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 4h14v16H5zM8 8h8M8 12h6M8 16h5"/>
+              </svg>
+              <strong id="step4-notes-title">Notities <span>(optioneel)</span></strong>
+            </div>
+
+            <label class="step4-notes-label">
+              <span class="sr-only">Notities bij de vragen van de kandidaat</span>
+              <textarea name="interview_notes[step_4]" rows="6" placeholder="Maak hier je aantekeningen..."></textarea>
+            </label>
+          </section>
+
+          <fieldset class="step4-tool-card">
+            <legend class="step4-tool-title">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <rect x="5" y="4" width="14" height="16" rx="1"/>
+                <path d="M9 4V2h6v2M8 9h1M12 9h4M8 13h1M12 13h4M8 17h1M12 17h4"/>
+              </svg>
+              <strong>Observaties <span>(optioneel)</span></strong>
+            </legend>
+
+            <div class="step4-observation-list">
+              <label class="step4-observation-item">
+                <input type="checkbox" name="observations[interest_organization]" value="1">
+                <span>Toont interesse in de organisatie</span>
+              </label>
+
+              <label class="step4-observation-item">
+                <input type="checkbox" name="observations[relevant_questions]" value="1">
+                <span>Stelt relevante vragen</span>
+              </label>
+
+              <label class="step4-observation-item">
+                <input type="checkbox" name="observations[growth_opportunities]" value="1">
+                <span>Vraagt naar ontwikkeling / doorgroeimogelijkheden</span>
+              </label>
+
+              <label class="step4-observation-item">
+                <input type="checkbox" name="observations[team_and_atmosphere]" value="1">
+                <span>Vraagt naar team en werksfeer</span>
+              </label>
+
+              <label class="step4-observation-item">
+                <input type="checkbox" name="observations[practical_matters]" value="1">
+                <span>Vraagt naar praktische zaken (uren, vergoedingen, etc.)</span>
+              </label>
+
+              <label class="step4-observation-item">
+                <input type="checkbox" name="observations[other]" value="1">
+                <span>Andere observatie...</span>
+              </label>
+            </div>
+          </fieldset>
+        </form>
+
+        <aside class="step4-tip-card" aria-label="Tip voor de interviewer">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M9 18h6M10 21h4"/>
+            <path d="M8.2 14.5A6 6 0 1 1 15.8 14.5C14.7 15.4 14 16.4 14 18h-4c0-1.6-.7-2.6-1.8-3.5Z"/>
+            <path d="M12 2V1M4.9 4.9l-.7-.7M19.1 4.9l.7-.7M3 12H2M22 12h-1"/>
+          </svg>
+          <div>
+            <strong>Tip</strong>
+            <p>De vragen die de kandidaat stelt, kunnen waardevolle informatie geven over motivatie, verwachtingen en geschiktheid voor de functie.</p>
+          </div>
+        </aside>
+      </section>
+
+      <nav class="interviewer-step-actions step4-actions" aria-label="Stap navigatie">
+        <a class="interview-secondary-button" href="./step-3-work-experience.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5M10 7l-5 5 5 5"/></svg>
+          <span>Vorige stap</span>
+        </a>
+
+        <a class="interview-primary-button" href="./step-5.html" data-action="next-step">
+          <span>Volgende stap</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+        </a>
+      </nav>
+    </main>
+  </div>
+</body>
+</html>
