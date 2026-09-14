@@ -990,11 +990,6 @@ Pre-account profile modal - pre-account-profile.html
   cursor: pointer;
 }
 
-.profile-close svg {
-  width: 17px;
-  height: 17px;
-  stroke-width: 1.8;
-}
 
 .profile-summary {
   min-height: 113px;
@@ -1493,15 +1488,6 @@ Pre-account profile modal - pre-account-profile.html
 
 
 /* Profile icon sizes */
-.preaccount-profile svg {
-  width: 26px;
-  height: 26px;
-}
-
-.preaccount-profile .profile-close svg {
-  width: 30px;
-  height: 30px;
-}
 
 .preaccount-profile .profile-btn svg {
   width: 22px;
